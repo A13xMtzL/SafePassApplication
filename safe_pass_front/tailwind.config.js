@@ -1,3 +1,5 @@
+// (c) URJC - Safe Pass 2023, rights reserved.
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
