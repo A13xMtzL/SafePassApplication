@@ -32,7 +32,3 @@ def generator(selection,length):
     while check_char(selection, password):
         password = ''.join(secrets.choice(valid_chars) for _ in range(length))
     return password
-
-if __name__ == "__main__":
-    selection = ["lower", "special", "upper", "number"]
-    print(generator(selection, 20))
