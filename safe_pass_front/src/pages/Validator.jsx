@@ -12,7 +12,7 @@ export default function Validator() {
         id="password"
         name="password"
         placeholder="Introduce la contraseña"
-        className="text-yellow-400 rounded-md bg-gray-800 align text-center plc-holder middle fontSize-2xl plc-holderSize-2xl"
+        className="text-yellow-400 rounded-md bg-gray-800 align plc-holder middle fontSize-2xl plc-holderSize-2xl"
       />
       <button type="submit" id="submit" className="bg-yellow-400 ml-4">
         Comprobar
