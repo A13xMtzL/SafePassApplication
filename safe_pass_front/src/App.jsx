@@ -13,8 +13,8 @@ export default function App() {
     <>
       <Router>
         <NavBar />
-        <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden ">
-          <BackgroundCircles />
+        <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center ">
+          {/* <BackgroundCircles /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/validator" element={<Validator />} />
