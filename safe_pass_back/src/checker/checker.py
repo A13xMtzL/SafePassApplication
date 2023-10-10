@@ -29,5 +29,3 @@ def check_common(password):
 
 def check_length(password):
     return(len(password) >= 8)
-
-print(check_length("testtst"))
