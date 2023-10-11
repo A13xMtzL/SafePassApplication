@@ -1,24 +1,6 @@
 import secrets
 import string
-
-def check_char(valid_chars,password):
-    """
-    Given a list of chars groups, checks that the password at least
-    have one char of each group. Returns a boolean.
-    """
-    valid =[]
-    for group in valid_chars:
-        group_valid = []
-        for c in group:
-            if c in password:
-                group_valid.append(True)
-            else:
-                group_valid.append(False)
-            if any(group_valid):
-                valid.append(True)
-            else:
-                valid.append(False)
-    return all(valid)
+from safe_pass_back.src.checker.checker import check_char
 def generator(selection,length):
     """"
     Selection string must be sanitized
@@ -29,6 +11,6 @@ def generator(selection,length):
     for arr in selection:
         valid_chars += mode[arr]
     password = ''.join(secrets.choice(valid_chars) for _ in range(length))
-    while check_char(selection, password):
+    while check_char([[mode[sel]] for sel in selection], password):
         password = ''.join(secrets.choice(valid_chars) for _ in range(length))
     return password
