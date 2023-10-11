@@ -2,7 +2,7 @@ import string
 import requests
 import hashlib
 
-def check_char(valid_chars,password):
+def check_char(valid_chars: list,password: str):
     """
     Given a list of chars groups, checks that the password at least
     have one char of each group. Returns a boolean.
@@ -21,14 +21,14 @@ def check_char(valid_chars,password):
                 valid.append(False)
     return all(valid)
 
-def check_common(password):
+def check_common(password: str):
     with open('../../assets/rockyou.txt', 'r', encoding='utf-8', errors='ignore') as archivo:
         for linea in archivo:
             if password == linea.strip():
                 return True
         return False
 
-def check_length(password):
+def check_length(password: str):
     return(len(password) >= 8)
 
 def check_is_password_leaked(password: str):
@@ -41,4 +41,16 @@ def check_is_password_leaked(password: str):
     # If the response status code is 200, it means the password has been leaked
     return response.status_code == 200
 
-print(check_length("testtst"))
+def check_password_quality(password: str):
+    chars_groups = [string.ascii_lowercase,string.ascii_uppercase,string.digits,string.punctuation]
+    if not check_length(password):
+        return "Very Poor"
+    elif check_char([string.ascii_lowercase],password) or check_char([string.ascii_uppercase],password) or check_char([string.digits],password) or check_char([string.punctuation],password):
+        return "Poor"
+    else:
+        for i in range(4):
+            for j in range(i+1,4):
+                if check_char([chars_groups[i],chars_groups[j]],password):
+                    return "Good"
+        return "Very Good"
+

@@ -11,6 +11,7 @@ def generator(selection,length):
     for arr in selection:
         valid_chars += mode[arr]
     password = ''.join(secrets.choice(valid_chars) for _ in range(length))
-    while check_char([[mode[sel]] for sel in selection], password):
+    valid_chars_list = [[mode[sel]] for sel in selection]
+    while check_char(valid_chars_list, password):
         password = ''.join(secrets.choice(valid_chars) for _ in range(length))
     return password
