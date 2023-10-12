@@ -1,5 +1,7 @@
-import { defineConfig } from 'vite'
+// (c) URJC - Safe Pass 2023, rights reserved.
+
 import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({

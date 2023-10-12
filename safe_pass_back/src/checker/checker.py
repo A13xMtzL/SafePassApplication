@@ -3,10 +3,6 @@ import requests
 import hashlib
 
 def check_char(valid_chars: list,password: str):
-    """
-    Given a list of chars groups, checks that the password at least
-    have one char of each group. Returns a boolean.
-    """
     valid =[]
     for group in valid_chars:
         group_valid = []

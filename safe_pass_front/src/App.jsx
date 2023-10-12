@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// (c) URJC - Safe Pass 2023, rights reserved.
+
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
+import BackgroundCircles from './componets/BackgroundCircles'
+import NavBar from './componets/NavBar'
+import Generator from './pages/Generator'
+import Home from './pages/Home'
+import Validator from './pages/Validator'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <NavBar />
+        <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center ">
+          {/* <BackgroundCircles /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/validator" element={<Validator />} />
+            <Route path="/generator" element={<Generator />} />
+          </Routes>
+        </div>
+      </Router>
     </>
   )
 }
-
-export default App
