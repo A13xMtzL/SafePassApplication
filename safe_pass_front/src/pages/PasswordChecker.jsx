@@ -1,7 +1,7 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 import { useCallback, useEffect, useState } from 'react'
 
-const PasswordChecker = () => {
+export default function PasswordChecker() {
   const [password, setPassword] = useState('')
   const [passwordStrength, setPasswordStrength] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -94,5 +94,3 @@ const PasswordChecker = () => {
     // </div>
   )
 }
-
-export default PasswordChecker

@@ -3,12 +3,10 @@
 import React from 'react'
 import PasswordChecker from './PasswordChecker'
 
-function SafePass() {
+export default function SafePass() {
   return (
     <div className="SafePass">
       <PasswordChecker />
     </div>
   )
 }
-
-export default SafePass
