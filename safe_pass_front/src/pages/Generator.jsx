@@ -1,6 +1,6 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 import React from 'react'
-// import { generator } from '../../../safe_pass_back/src/generator.py';
+//import { generator } from '../../../safe_pass_back/src/generator.py';
 
 export default function Generator() {
   return (<div>
