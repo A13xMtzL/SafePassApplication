@@ -1,81 +1,98 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
-
-import React, { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react'
 
 const PasswordChecker = () => {
-    const [password, setPassword] = useState('');
-    const [passwordStrength, setPasswordStrength] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState('')
+  const [passwordStrength, setPasswordStrength] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
 
+  useEffect(() => {
     const checkPasswordStrength = () => {
-        const hasUppercase = /[A-Z]/.test(password);
-        const hasLowercase = /[a-z]/.test(password);
-        const hasDigit = /\d/.test(password);
-        const hasSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password);
-        const length = password.length;
+      const hasUppercase = /[A-Z]/.test(password)
+      const hasLowercase = /[a-z]/.test(password)
+      const hasDigit = /\d/.test(password)
+      const hasSpecialChar = /[!@#$%^&*()_+{}[\]:;<>,.?~\\-]/.test(password)
+      const length = password.length
 
-        if (hasUppercase && hasLowercase && hasDigit && hasSpecialChar && length >= 14) {
-            setPasswordStrength('Fuerte');
-        } else if (hasUppercase && hasLowercase && (hasDigit || hasSpecialChar) && (length >= 10 && length < 14)) {
-            setPasswordStrength('Media');
-        } else {
-            setPasswordStrength('Débil');
-        }
-    };
-
-    const getBarColor = () => {
-        switch (passwordStrength) {
-            case 'Fuerte':
-                return 'bg-green-300';
-            case 'Media':
-                return 'bg-orange-300';
-            case 'Débil':
-            default:
-                return 'bg-red-300';
-        }
-    };
-
-    const getBarLenght = () => {
-        switch (passwordStrength) {
-            case 'Fuerte':
-                return 'w-full';
-            case 'Media':
-                return 'w-1/2';
-            case 'Débil':
-            default:
-                return 'w-1/4';
-        }
+      if (
+        hasUppercase &&
+        hasLowercase &&
+        hasDigit &&
+        hasSpecialChar &&
+        length >= 14
+      ) {
+        setPasswordStrength('Fuerte')
+      } else if (
+        hasUppercase &&
+        hasLowercase &&
+        (hasDigit || hasSpecialChar) &&
+        length >= 10 &&
+        length < 14
+      ) {
+        setPasswordStrength('Media')
+      } else {
+        setPasswordStrength('Débil')
+      }
     }
 
-    return (
-        <div className="my-4 p-4 border border-gray-300 rounded">
-            <h2 className="text-lg font-semibold">Comprobador de Contraseñas</h2>
-            <input
-                type={showPassword ? 'text' : 'password'}
-                className="w-full p-2 my-2 border border-gray-300 rounded"
-                placeholder="Introduce tu contraseña"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button
-                className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-                onClick={checkPasswordStrength}
-            >
-                Comprobar
-            </button>
-            <button
-                className="bg-gray-300 text-black p-2 ml-2 rounded hover:bg-gray-400"
-                onClick={() => setShowPassword(!showPassword)}
-            >
-                {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña
-            </button>
-            {passwordStrength && (
-                <div className={`mt-4 p-2 rounded ${getBarColor()} ${getBarLenght()}`}>
-                    <p>{passwordStrength}</p>
-                </div>
-            )}
-        </div>
-    );
-};
+    checkPasswordStrength()
+  }, [password])
 
-export default PasswordChecker;
+  const getBarColor = useCallback(() => {
+    switch (passwordStrength) {
+      case 'Fuerte':
+        return 'bg-green-600'
+      case 'Media':
+        return 'bg-orange-600'
+      case 'Débil':
+      default:
+        return 'bg-red-600'
+    }
+  }, [passwordStrength])
+
+  const getBarLength = useCallback(() => {
+    switch (passwordStrength) {
+      case 'Fuerte':
+        return 'w-[70%]'
+      case 'Media':
+        return 'w-[60%]'
+      case 'Débil':
+      default:
+        return 'w-[40%]'
+    }
+  }, [passwordStrength])
+
+  return (
+    <div className=" p-6 font-mono">
+      {/* <div className="ml-2 rounded bg-gray-300 p-2 text-black hover:bg-gray-400"> */}
+      <h1 className="m-2  text-3xl font-semibold">
+        Comprobador de Contraseñas
+      </h1>
+      <input
+        type={showPassword ? 'text' : 'password'}
+        className="my-3 w-full rounded border border-teal-600 p-3 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-700"
+        placeholder="Introduce tu contraseña"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button
+        className="ml-2 mt-3 rounded bg-gray-300 p-2  text-black shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-gray-400  active:scale-x-100"
+        onClick={() => setShowPassword(!showPassword)}
+      >
+        {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña
+      </button>
+      {passwordStrength && (
+        <div className=" flex w-full items-center justify-center ">
+          <div
+            className={`mt-4 items-center justify-center rounded p-2 ${getBarColor()} ${getBarLength()}`}
+          >
+            <p>{passwordStrength}</p>
+          </div>
+        </div>
+      )}
+    </div>
+    // </div>
+  )
+}
+
+export default PasswordChecker
