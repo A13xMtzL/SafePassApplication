@@ -35,7 +35,11 @@ export default function PasswordChecker() {
       }
     }
 
-    checkPasswordStrength()
+    if (password.length > 0) {
+      checkPasswordStrength()
+    } else {
+      setPasswordStrength('')
+    }
   }, [password])
 
   const getBarColor = useCallback(() => {
@@ -65,7 +69,7 @@ export default function PasswordChecker() {
   return (
     <div className=" p-6 font-mono">
       {/* <div className="ml-2 rounded bg-gray-300 p-2 text-black hover:bg-gray-400"> */}
-      <h1 className="m-2  text-3xl font-semibold">
+      <h1 className="m-2  text-3xl font-semibold text-slate-400">
         Comprobador de Contraseñas
       </h1>
       <input
@@ -74,6 +78,7 @@ export default function PasswordChecker() {
         placeholder="Introduce tu contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        autoComplete="off"
       />
       <button
         className="ml-2 mt-3 rounded bg-gray-300 p-2  text-black shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-gray-400  active:scale-x-100"
@@ -81,7 +86,7 @@ export default function PasswordChecker() {
       >
         {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña
       </button>
-      {passwordStrength && (
+      {passwordStrength && password.length > 0 && (
         <div className=" flex w-full items-center justify-center ">
           <div
             className={`mt-4 items-center justify-center rounded p-2 ${getBarColor()} ${getBarLength()}`}
