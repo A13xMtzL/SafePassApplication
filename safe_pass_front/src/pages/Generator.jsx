@@ -14,7 +14,7 @@ export default function Generator() {
       id="submit"
       className="ml-3 rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700"
     >
-      Generar contraseña
+      Generar contraseña 
     </button>
   </div>
 </div>)
