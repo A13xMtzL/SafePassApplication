@@ -14,7 +14,7 @@ export default function App() {
       <Router>
         <NavBar />
         <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center ">
-          {/* <BackgroundCircles /> */}
+          <BackgroundCircles />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/validator" element={<Validator />} />
