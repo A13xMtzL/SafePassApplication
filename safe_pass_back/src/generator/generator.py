@@ -1,6 +1,6 @@
 import secrets
 import string
-from safe_pass_back.src.checker.checker import check_char
+from checker.checker import check_char
 
 def generator(selection,length):
     """"
