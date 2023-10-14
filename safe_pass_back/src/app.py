@@ -3,6 +3,7 @@ from markupsafe import escape
 from generator.generator import generator
 from checker.checker import check_is_password_leaked
 
+
 app = Flask(__name__,
             static_folder="./static",)
 @app.route('/',methods=['GET'])
