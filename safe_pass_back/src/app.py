@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request,abort
 from markupsafe import escape
 from generator.generator import generator
+from checker.checker import check_is_password_leaked
+
 
 app = Flask(__name__,
             static_folder="./static",)
@@ -18,6 +20,19 @@ def genPass():
         length = req.get('length')
         data = {
             "password" : generator(selection,length)
+        }
+        return jsonify(data)
+
+    except ValueError:
+        abort(400)
+
+@app.route('/api/filtered', methods=['POST'])
+def checkFiltered():
+    try:
+        req = request.get_json()
+        password = req.get('password')
+        data = {
+            "filtered" : check_is_password_leaked(password)
         }
         return jsonify(data)
 
