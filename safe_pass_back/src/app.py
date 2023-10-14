@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request,abort
 from markupsafe import escape
-from safe_pass_back.src.generator.generator import generator
+from generator.generator import generator
 
 app = Flask(__name__,
             static_folder="./static",)
