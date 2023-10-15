@@ -1,3 +1,5 @@
+// (c) URJC - Safe Pass 2023, rights reserved.
+
 import React, { useState } from 'react'
 
 export default function CheckLeaked() {

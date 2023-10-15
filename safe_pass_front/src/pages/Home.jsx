@@ -1,6 +1,6 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
         </Link>
         {/* Tercera imagen con texto */}
-        <Link to='/validator'>
+        <Link to="/validator">
           <div className="m-4 text-center">
             <img
               src="/PasswordVal.jpeg"

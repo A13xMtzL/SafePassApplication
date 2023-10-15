@@ -1,4 +1,5 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
+
 import { useCallback, useEffect, useState } from 'react'
 
 export default function PasswordChecker() {
@@ -67,10 +68,10 @@ export default function PasswordChecker() {
   }, [passwordStrength])
 
   return (
-    <div className=" p-6 font-mono">
+    <div className=" p-6 font-mono ">
       {/* <div className="ml-2 rounded bg-gray-300 p-2 text-black hover:bg-gray-400"> */}
       <h1 className="m-2  text-3xl font-semibold text-slate-400">
-        Comprobador de Contraseñas
+        Validador de seguridad <br /> de contraseñas
       </h1>
       <input
         type={showPassword ? 'text' : 'password'}
@@ -81,7 +82,7 @@ export default function PasswordChecker() {
         autoComplete="off"
       />
       <button
-        className="ml-2 mt-3 rounded bg-teal-600 p-2  text-black shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-teal-700  active:scale-x-100"
+        className="ml-2 mt-3 rounded bg-teal-600  p-2  text-black shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-teal-700  active:scale-x-100"
         onClick={() => setShowPassword(!showPassword)}
       >
         {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña
