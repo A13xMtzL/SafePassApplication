@@ -1,7 +1,9 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
+
 import { useCallback, useState } from 'react'
 
 export default function Generator() {
+  const [generatedPassword, setGeneratedPassword] = useState('')
   const [selection, setSelection] = useState({
     length: 12,
     lowercase: true,
@@ -35,7 +37,9 @@ export default function Generator() {
       body: JSON.stringify(requestBody),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        setGeneratedPassword(data.password)
+      })
       .catch((error) => console.error(error))
   }, [requestBody])
 
@@ -57,7 +61,9 @@ export default function Generator() {
 
   return (
     <div className="font-mono">
-      <h2 className="text-3xl text-slate-400">Generar contraseña segura</h2>
+      <h1 className="m-2 text-3xl font-semibold text-slate-400">
+        Generar contraseña segura
+      </h1>
       <form className="m-4" onSubmit={handleSubmit}>
         <div className="mb-2 flex items-center">
           <label htmlFor="length" className="mr-2">
@@ -66,7 +72,7 @@ export default function Generator() {
           <input
             type="number"
             id="length"
-            className="w-16 rounded border  bg-slate-900 border-yellow-800 p-2"
+            className="w-16 rounded border border-yellow-800 bg-slate-900 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-800"
             min="6"
             max="50"
             value={selection.length}
@@ -130,7 +136,23 @@ export default function Generator() {
           Generar contraseña
         </button>
       </form>
-      {/* {data && <p className="mt-4">Contraseña generada: {data.password}</p>} */}
+      {generatedPassword && (
+        <div className="mt-10">
+          <label
+            htmlFor="password"
+            className=" my-4 flex items-center justify-center text-lg text-yellow-500 text-opacity-80"
+          >
+            Tu contraseña generada es:
+          </label>
+          <input
+            type="text"
+            id="password"
+            className="max-h-32 w-64 items-center justify-center overflow-y-auto rounded border border-yellow-700 p-2 text-center focus:outline-none focus:ring-2 focus:ring-yellow-800"
+            value={generatedPassword}
+            readOnly
+          />
+        </div>
+      )}{' '}
     </div>
   )
 }
