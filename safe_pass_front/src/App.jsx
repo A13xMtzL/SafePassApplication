@@ -7,6 +7,7 @@ import NavBar from './componets/NavBar'
 import Generator from './pages/Generator'
 import Home from './pages/Home'
 import Validator from './pages/Validator'
+import CheckLeaked from './pages/CheckLeaked'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/validator" element={<Validator />} />
             <Route path="/generator" element={<Generator />} />
+            <Route path="/leaked" element={<CheckLeaked />} />
           </Routes>
         </div>
       </Router>
