@@ -81,7 +81,7 @@ export default function PasswordChecker() {
         autoComplete="off"
       />
       <button
-        className="ml-2 mt-3 rounded bg-gray-300 p-2  text-black shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-gray-400  active:scale-x-100"
+        className="ml-2 mt-3 rounded bg-teal-600 p-2  text-black shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-teal-700  active:scale-x-100"
         onClick={() => setShowPassword(!showPassword)}
       >
         {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña

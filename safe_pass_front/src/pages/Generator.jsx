@@ -2,31 +2,46 @@
 import { useCallback, useState } from 'react'
 
 export default function Generator() {
-  const [options, setOptions] = useState({
+  const [selection, setSelection] = useState({
     length: 12,
     lowercase: true,
     uppercase: true,
     numbers: true,
     symbols: true,
   })
-
+  const selectionArray = []
+  if (selection.lowercase) {
+    selectionArray.push('lower')
+  }
+  if (selection.uppercase) {
+    selectionArray.push('upper')
+  }
+  if (selection.numbers) {
+    selectionArray.push('number')
+  }
+  if (selection.symbols) {
+    selectionArray.push('special')
+  }
+  const requestBody = {
+    selection: selectionArray,
+    length: selection.length,
+  }
   const generatePassword = useCallback(() => {
-    // TODO: fetch to backend and show the password
-    fetch('http://localhost:5000/api/generator', {
+    fetch('http://localhost:8080/api/gen', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(options),
+      body: JSON.stringify(requestBody),
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((error) => console.error(error))
-  }, [options])
+  }, [requestBody])
 
   const handleOptionChange = useCallback((event) => {
     const { name, checked } = event.target
-    setOptions((prevOptions) => ({
+    setSelection((prevOptions) => ({
       ...prevOptions,
       [name]: checked,
     }))
@@ -51,12 +66,12 @@ export default function Generator() {
           <input
             type="number"
             id="length"
-            className="w-16 rounded border border-teal-600 p-2"
+            className="w-16 rounded border  bg-slate-900 border-yellow-800 p-2"
             min="6"
             max="50"
-            value={options.length}
+            value={selection.length}
             onChange={(e) =>
-              setOptions((prevOptions) => ({
+              setSelection((prevOptions) => ({
                 ...prevOptions,
                 length: parseInt(e.target.value),
               }))
@@ -69,7 +84,7 @@ export default function Generator() {
             id="lowercase"
             name="lowercase"
             className="mr-2"
-            checked={options.lowercase}
+            checked={selection.lowercase}
             onChange={handleOptionChange}
           />
           <label htmlFor="lowercase">Letras minúsculas</label>
@@ -80,7 +95,7 @@ export default function Generator() {
             id="uppercase"
             name="uppercase"
             className="mr-2"
-            checked={options.uppercase}
+            checked={selection.uppercase}
             onChange={handleOptionChange}
           />
           <label htmlFor="uppercase">Letras mayúsculas</label>
@@ -91,7 +106,7 @@ export default function Generator() {
             id="numbers"
             name="numbers"
             className="mr-2"
-            checked={options.numbers}
+            checked={selection.numbers}
             onChange={handleOptionChange}
           />
           <label htmlFor="numbers">Números</label>
@@ -102,7 +117,7 @@ export default function Generator() {
             id="symbols"
             name="symbols"
             className="mr-2"
-            checked={options.symbols}
+            checked={selection.symbols}
             onChange={handleOptionChange}
           />
           <label htmlFor="symbols">Símbolos</label>
@@ -115,6 +130,7 @@ export default function Generator() {
           Generar contraseña
         </button>
       </form>
+      {/* {data && <p className="mt-4">Contraseña generada: {data.password}</p>} */}
     </div>
   )
 }
