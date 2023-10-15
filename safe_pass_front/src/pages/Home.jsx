@@ -1,6 +1,35 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
+import React, { useState } from 'react';
+
 export default function Home() {
+
+  const AdditionalImages = () => {
+    return (
+      <div className="flex justify-center mt-4">
+        {/* Primera imagen con texto */}
+        <div className="m-4 text-center">
+          <img src="/PasswordGen.jpeg" alt="Imagen 1" className="max-w-full" />
+          <p>Genera de contraseñas seguras</p>
+        </div>
+        {/* Segunda imagen con texto */}
+        <div className="m-4 text-center">
+          <img src="/PwnedCheck.jpeg" alt="Imagen 2" className="max-w-full" />
+          <p>Comprueba si tienes contraseñas vulneradas</p>
+        </div>
+        {/* Tercera imagen con texto */}
+        <div className="m-4 text-center">
+          <img src="/PasswordVal.jpeg" alt="Imagen 3" className="max-w-full" />
+          <p>Valida tus contraseñas</p>
+        </div>
+      </div>
+    );
+  };
+  const [showAdditionalImages, setShowAdditionalImages] = useState(false);
+
+  const toggleAdditionalImages = () => {
+    setShowAdditionalImages(!showAdditionalImages);
+  };
   return (
     <div>
       <h1 className="font-mono text-5xl text-slate-200 pb-2">Safe Pass</h1>
@@ -13,6 +42,13 @@ export default function Home() {
             y generar contraseñas seguras de una manera fácil y rápida.
           </p>
         </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <img className="w-40 pt-4 transform hover:scale-110 transition-transform duration-300 ease-in-out"
+          src="/Logo.png"
+          alt="Safe Pass Logo"
+          onClick={toggleAdditionalImages} />
+        {showAdditionalImages && <AdditionalImages />}
       </div>
     </div>
   )
