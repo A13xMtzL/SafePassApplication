@@ -57,7 +57,9 @@ export default function Home() {
             El primer paso hacia una mayor seguridad
           </h4>
           <p className="text-slate-200">
-            SafePass te permite realizar multiples acciones para mejorar tu seguridad digital como generar contraseñas aleatorias, comprobar la seguridad de tus contraseñas y comprobar si han sido filtradas.
+            SafePass te permite realizar multiples acciones para mejorar tu
+            seguridad digital como generar contraseñas aleatorias, comprobar la
+            seguridad de tus contraseñas y comprobar si han sido filtradas.
           </p>
         </div>
       </div>
