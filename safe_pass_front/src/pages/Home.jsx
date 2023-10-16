@@ -15,7 +15,7 @@ export default function Home() {
               alt="Generación de contraseña segura"
               className="max-w-full"
             />
-            <p>Genera de contraseñas seguras</p>
+            <p>Genera contraseñas seguras</p>
           </div>
         </Link>
         {/* Segunda imagen con texto */}
@@ -50,17 +50,14 @@ export default function Home() {
   }
   return (
     <div>
-      <h1 className="pb-2 font-mono text-5xl text-slate-200">Safe Pass</h1>
+      <h1 className="pb-2 font-mono text-5xl text-slate-200">SafePass</h1>
       <div className="max-w-20rem overflow-hidden rounded-md bg-sky-950 shadow-md">
         <div className="px-4 py-2 ">
           <h4 className="mb-2 text-lg font-bold text-slate-200">
             El primer paso hacia una mayor seguridad
           </h4>
           <p className="text-slate-200">
-            SafePass es un gestor de contraseñas que no solo te permite guardar
-            tus credenciales, sino que también puedes comprobar si tu contraseña
-            ha sido filtrada, validar si una contraseña es segura y generar
-            contraseñas seguras de una manera fácil y rápida.
+            SafePass te permite realizar multiples acciones para mejorar tu seguridad digital como generar contraseñas aleatorias, comprobar la seguridad de tus contraseñas y comprobar si han sido filtradas.
           </p>
         </div>
       </div>
