@@ -13,9 +13,9 @@ SafePass te permite realizar multiples acciones para mejorar tu seguridad digita
 - Alejandro Martínez L.
 - Pablo López
 
-## InstalaciónPara comenzar con SafePass, siga estos pasos
-
-Clona el repositorio en tu máquina local usando `git clone https://github.com/A13xMtzL/SafePassApplication.git`
+## Instalación
+Para comenzar con SafePass, siga estos pasos
+1. Clona el repositorio en tu máquina local usando `git clone https://github.com/A13xMtzL/SafePassApplication.git`
 
 ### Frontend
 
