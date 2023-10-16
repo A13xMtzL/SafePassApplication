@@ -22,11 +22,11 @@ export default function CheckLeaked() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setIsLeaked(data)
-        if (data) {
-          setMessage('La contraseña ha sido filtrada!')
+        setIsLeaked(data.filtered)
+        if (data.filtered) {
+          setMessage('¡La contraseña ha sido filtrada!')
         } else {
-          setMessage('La contraseña no ha sido filtrada!')
+          setMessage('¡La contraseña no ha sido filtrada! ¡Enhorabuena!')
         }
       })
       .catch((error) => console.error(error))
