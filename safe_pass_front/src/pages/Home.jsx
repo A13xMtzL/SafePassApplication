@@ -15,7 +15,7 @@ export default function Home() {
               alt="Generación de contraseña segura"
               className="max-w-full"
             />
-            <p>Genera de contraseñas seguras</p>
+            <p>Genera contraseñas seguras</p>
           </div>
         </Link>
         {/* Segunda imagen con texto */}
