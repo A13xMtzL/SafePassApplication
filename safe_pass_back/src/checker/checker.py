@@ -35,7 +35,15 @@ def check_is_password_leaked(password: str):
     response = requests.get(f"https://api.pwnedpasswords.com/range/{password_hash[:5]}")
 
     # If the response status code is 200, it means the password has been leaked
-    return response.status_code == 200
+    #return response.status_code == 200
+    pnum = False
+    if response.status_code == 200:
+        hash_list = response.text.splitlines()
+        for item in hash_list:
+            if item[0:35] == password_hash[5:]:
+              pnum = True
+        return pnum
+    return False
 
 def check_password_quality(password: str):
     chars_groups = [string.ascii_lowercase,string.ascii_uppercase,string.digits,string.punctuation]

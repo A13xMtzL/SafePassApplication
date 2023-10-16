@@ -42,5 +42,18 @@ def checkFiltered():
   except ValueError:
       abort(400)
 
+@app.route('/api/filtered', methods=['POST'])
+def checkFiltered():
+    try:
+        req = request.get_json()
+        password = req.get('password')
+        data = {
+            "filtered" : check_is_password_leaked(password)
+        }
+        return jsonify(data)
+
+    except ValueError:
+        abort(400)
+
 if __name__ == "__main__":
   app.run(port=8080,debug=False)
