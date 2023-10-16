@@ -17,7 +17,7 @@ export default function NavBar() {
         <Link to="/" className="flex items-center">
           {/* TODO: Terminar lo del logo */}
           <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-            Safe Pass
+            SafePass
           </span>
         </Link>
         <div className="flex md:order-2">
