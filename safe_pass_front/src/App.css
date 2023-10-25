@@ -4,6 +4,12 @@
   padding: 2rem;
   text-align: center;
 }
+
+.css-glow {
+  -webkit-box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.032);
+  -moz-box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.064);
+  box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.12);
+}
 /*
 .logo {
   height: 6em;
