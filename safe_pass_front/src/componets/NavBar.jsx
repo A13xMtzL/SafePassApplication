@@ -1,16 +1,15 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function NavBar() {
-  const route = useLocation()
-  const isActive = useCallback(
-    (link) => {
-      return link.test(route.pathname)
-    },
-    [route.pathname],
-  )
+  const [isCollapsed, setIsCollapsed] = useState(true)
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed)
+  }
+
   return (
     <nav className="fixed left-0 top-0 z-20 w-full border-b border-gray-200 bg-white dark:border-gray-900 dark:bg-black">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
@@ -22,11 +21,11 @@ export default function NavBar() {
         </Link>
         <div className="flex md:order-2">
           <button
-            data-collapse-toggle="navbar-sticky"
+            onClick={toggleCollapse}
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-sticky"
-            aria-expanded="false"
+            aria-expanded={!isCollapsed}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -47,7 +46,9 @@ export default function NavBar() {
           </button>
         </div>
         <div
-          className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+          className={`${
+            isCollapsed ? 'hidden' : ''
+          } w-full items-center justify-between md:order-1 md:flex md:w-auto`}
           id="navbar-sticky"
         >
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium dark:border-gray-700 dark:bg-black md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 md:dark:bg-black">
