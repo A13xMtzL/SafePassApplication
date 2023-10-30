@@ -1,6 +1,7 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
 import { useCallback, useState } from 'react'
+import PasswordAnimation from '../componets/PasswordAnimation'
 
 export default function Generator() {
   const [generatedPassword, setGeneratedPassword] = useState('')
@@ -137,22 +138,13 @@ export default function Generator() {
         </button>
       </form>
       {generatedPassword && (
-        <div className="mt-10">
-          <label
-            htmlFor="password"
-            className=" my-4 flex items-center justify-center text-lg text-yellow-500 text-opacity-80"
-          >
-            Tu contraseña generada es:
-          </label>
-          <input
-            type="text"
-            id="password"
-            className="max-h-32 w-64 items-center justify-center overflow-y-auto rounded border border-yellow-700 p-2 text-center focus:outline-none focus:ring-2 focus:ring-yellow-800"
-            value={generatedPassword}
-            readOnly
+        <div className="mt-10 min-w-full">
+          <PasswordAnimation
+            password={generatedPassword}
+            key={generatedPassword}
           />
         </div>
-      )}{' '}
+      )}
     </div>
   )
 }

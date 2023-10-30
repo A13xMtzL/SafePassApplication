@@ -19,7 +19,7 @@ export default function PasswordChecker() {
         hasUppercase &&
         hasLowercase &&
         hasDigit &&
-        hasSpecialChar &&
+        hasSpecialChar && 
         length >= 14
       ) {
         setPasswordStrength('Fuerte')
