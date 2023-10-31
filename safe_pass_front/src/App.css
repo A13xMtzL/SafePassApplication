@@ -4,6 +4,23 @@
   padding: 2rem;
   text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+  .css-glow {
+    -webkit-box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.032);
+    -moz-box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.064);
+    box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.12);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .css-glow {
+    -webkit-box-shadow: 0px 0px 107px 6px rgba(255, 164, 45, 0.048);
+    -moz-box-shadow: 0px 0px 107px 6px rgba(255, 216, 45, 0.073);
+    box-shadow: 0px 0px 107px 6px rgba(255, 206, 45, 0.2);
+  }
+}
+
 /*
 .logo {
   height: 6em;

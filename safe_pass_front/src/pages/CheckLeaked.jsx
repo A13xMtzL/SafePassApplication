@@ -39,21 +39,21 @@ export default function CheckLeaked() {
       <div className="flex h-screen flex-col items-center justify-center">
         <div className="w-full max-w-md">
           <form
-            className="mb-4 rounded px-8 pb-8 pt-6 shadow-md"
+            className="mb-4 rounded px-8 pb-8 pt-6 "
             onSubmit={handleCheckLeaked}
           >
             <div className="mb-4">
-              <h1 className="m-2 mb-4 text-3xl font-semibold text-slate-400">
+              <h1 className="m-2 mb-4 text-3xl font-semibold dark:text-slate-300 text-slate-700">
                 Verificación de contraseñas filtradas
               </h1>
               <label
-                className="mb-2 block font-bold text-gray-300"
+                className="mb-2 block font-bold text-gray-700 dark:text-gray-300"
                 htmlFor="password"
               >
                 Introduce tu contraseña:
               </label>
               <input
-                className="focus:lime-600 w-full appearance-none rounded border border-lime-700 px-3 py-2 placeholder-gray-600 shadow focus:outline-none focus:ring-2 focus:ring-lime-700"
+                className="focus:lime-600 w-full appearance-none rounded border border-lime-700 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-lime-700"
                 id="password"
                 type="password"
                 value={password}
@@ -63,7 +63,7 @@ export default function CheckLeaked() {
             </div>
             <div className=" items-center justify-between">
               <button
-                className="rounded bg-lime-700 px-4 py-2 font-bold text-white shadow-lg transition duration-300 ease-in-out  hover:scale-x-105 hover:bg-lime-800 active:scale-x-100"
+                className="rounded bg-green-500 dark:bg-lime-700 px-4 py-2 font-bold text-white transition duration-300 ease-in-out  hover:scale-x-105 dark:hover:bg-lime-800 hover:bg-green-600 active:scale-x-100"
                 type="submit"
               >
                 Revisar si <br />

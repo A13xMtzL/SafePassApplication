@@ -62,7 +62,7 @@ export default function Generator() {
 
   return (
     <div className="font-mono">
-      <h1 className="m-2 text-3xl font-semibold text-slate-400">
+      <h1 className="m-2 text-3xl font-semibold dark:text-slate-300 text-slate-800">
         Generar contraseña segura
       </h1>
       <form className="m-4" onSubmit={handleSubmit}>
@@ -73,7 +73,7 @@ export default function Generator() {
           <input
             type="number"
             id="length"
-            className="w-16 rounded border border-yellow-800 bg-slate-900 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-800"
+            className="w-16 rounded border border-yellow-800 dark:bg-slate-900 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-800"
             min="6"
             max="50"
             value={selection.length}
@@ -132,13 +132,13 @@ export default function Generator() {
         <button
           type="submit"
           id="submit"
-          className="ml-3 rounded bg-yellow-800 px-4 py-2 font-bold text-white transition duration-300 ease-in-out hover:scale-x-105 hover:bg-yellow-900 active:scale-x-100"
+          className="ml-3 rounded bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-800 px-4  py-2 font-bold text-white transition duration-300 ease-in-out hover:scale-x-105 dark:hover:bg-yellow-900 active:scale-x-100"
         >
           Generar contraseña
         </button>
       </form>
       {generatedPassword && (
-        <div className="mt-10 min-w-full">
+        <div className="mt-10">
           <PasswordAnimation
             password={generatedPassword}
             key={generatedPassword}
