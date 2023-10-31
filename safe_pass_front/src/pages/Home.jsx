@@ -50,8 +50,10 @@ export default function Home() {
   }
   return (
     <div>
-      <h1 className="pb-2 font-mono text-5xl text-slate-200">SafePass</h1>
-      <div className="max-w-20rem overflow-hidden rounded-md bg-sky-950 shadow-md">
+      <h1 className="pb-2 font-mono text-5xl dark:text-slate-200 text-slate-800">
+        SafePass
+      </h1>
+      <div className="max-w-20rem overflow-hidden rounded-md dark:bg-sky-950  bg-[#48474d] shadow-md">
         <div className="px-4 py-2 ">
           <h4 className="mb-2 text-lg font-bold text-slate-200">
             El primer paso hacia una mayor seguridad

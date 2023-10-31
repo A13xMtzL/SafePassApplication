@@ -4,9 +4,5 @@ import React from 'react'
 import PasswordChecker from '../componets/PasswordChecker'
 
 export default function SafePass() {
-  return (
-    <div className="SafePass">
-      <PasswordChecker />
-    </div>
-  )
+  return <PasswordChecker />
 }
