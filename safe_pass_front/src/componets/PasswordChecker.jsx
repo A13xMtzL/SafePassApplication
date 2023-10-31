@@ -27,8 +27,7 @@ export default function PasswordChecker() {
         hasUppercase &&
         hasLowercase &&
         (hasDigit || hasSpecialChar) &&
-        length >= 10 &&
-        length < 14
+        length >= 10
       ) {
         setPasswordStrength('Media')
       } else {
