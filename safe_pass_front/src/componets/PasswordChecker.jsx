@@ -81,7 +81,7 @@ export default function PasswordChecker() {
   const passwordInputType = showPassword ? 'text' : 'password'
 
   return (
-    <div className="css-glow rounded-lg bg-[#2dffc310] p-6 font-mono">
+    <div className="css-glow rounded-lg bg-[#ffbc2d11] dark:bg-[#2dffc310] p-6 font-mono">
       <h1 className="m-2 text-3xl font-semibold text-slate-800 dark:text-slate-300">
         Validador de seguridad <br /> de contraseñas
       </h1>
@@ -94,7 +94,7 @@ export default function PasswordChecker() {
         autoComplete="off"
       />
       <button
-        className="ml-2 mt-3 rounded bg-teal-600 p-2 text-black shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-teal-700 active:scale-x-100"
+        className="ml-2 mt-3 rounded p-2 text-gray-50 shadow-lg transition duration-300 ease-in-out hover:scale-x-105 dark:hover:bg-teal-700 active:scale-x-100 dark:bg-teal-600 bg-teal-700 hover:bg-teal-800 dark:text-gray-900"
         onClick={togglePasswordVisibility}
         title={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
         aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}

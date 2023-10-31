@@ -4,10 +4,10 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import BackgroundCircles from './componets/BackgroundCircles'
 import NavBar from './componets/NavBar'
+import CheckLeaked from './pages/CheckLeaked'
 import Generator from './pages/Generator'
 import Home from './pages/Home'
 import Validator from './pages/Validator'
-import CheckLeaked from './pages/CheckLeaked'
 
 export default function App() {
   return (
