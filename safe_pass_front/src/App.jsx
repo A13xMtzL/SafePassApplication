@@ -1,6 +1,6 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import BackgroundCircles from './componets/BackgroundCircles'
 import NavBar from './componets/NavBar'
