@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 
-export default function ModeButton() {
+export default function SwitchModeButton() {
   const [darkMode, setDarkMode] = useState(false) // state variable to track current mode
 
   const toggleDarkMode = useCallback(() => {
