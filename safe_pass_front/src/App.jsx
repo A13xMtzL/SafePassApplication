@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import BackgroundCircles from './componets/BackgroundCircles'
 import NavBar from './componets/NavBar'
+import SwitchModeButton from './componets/SwitchModeButton'
 import CheckLeaked from './pages/CheckLeaked'
 import Generator from './pages/Generator'
 import Home from './pages/Home'
@@ -16,6 +17,7 @@ export default function App() {
         <NavBar />
         <div className="flex h-screen flex-col items-center justify-center space-y-8 overflow-hidden text-center ">
           <BackgroundCircles />
+          <SwitchModeButton />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/validator" element={<Validator />} />
