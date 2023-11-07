@@ -16,23 +16,50 @@ export default function PasswordChecker() {
     const length = password.length
 
     if (
-      hasUppercase &&
-      hasLowercase &&
-      hasDigit &&
-      hasSpecialChar &&
-      length >= 14
-    ) {
-      setPasswordStrength('Fuerte')
-    } else if (
-      hasUppercase &&
-      hasLowercase &&
-      (hasDigit || hasSpecialChar) &&
-      length >= 10
-    ) {
-      setPasswordStrength('Media')
-    } else {
-      setPasswordStrength('Débil')
-    }
+        (hasUppercase &&
+        hasLowercase &&
+        hasDigit &&
+        hasSpecialChar && 
+        length >= 13) ||
+        (hasUppercase &&
+        hasLowercase &&
+        hasDigit &&
+        length >= 14) ||
+        (hasUppercase &&
+        hasLowercase &&
+        length >= 15) ||
+        ((hasUppercase ||
+        hasLowercase ||
+        hasSpecialChar) &&
+        length >= 18) ||
+        (hasDigit &&
+        length >= 20)
+      ) {
+        setPasswordStrength('Fuerte')
+      } else if (
+        (hasUppercase &&
+        hasLowercase &&
+        hasDigit &&
+        hasSpecialChar && 
+        length >= 9) ||
+        (hasUppercase &&
+        hasLowercase &&
+        hasDigit &&
+        length >= 10) ||
+        (hasUppercase &&
+        hasLowercase &&
+        length >= 11) ||
+        ((hasUppercase ||
+        hasLowercase ||
+        hasSpecialChar) &&
+        length >= 12) ||
+        (hasDigit &&
+        length >= 16)
+      ) {
+        setPasswordStrength('Media')
+      } else {
+        setPasswordStrength('Débil')
+      }
   }, [password])
 
   useEffect(() => {
