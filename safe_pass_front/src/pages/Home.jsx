@@ -67,7 +67,7 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center">
         <img
-          className="w-40 transform pt-4 transition-transform duration-300 ease-in-out hover:scale-110"
+          className="w-40 transform pt-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-12 cursor-pointer"
           src="/Logo.png"
           alt="Safe Pass Logo"
           onClick={toggleAdditionalImages}
