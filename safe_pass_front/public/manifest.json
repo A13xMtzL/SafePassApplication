@@ -1,0 +1,17 @@
+{
+  "name": "SafePass",
+  "version": "1.0.0",
+  "description": "Password Generator",
+  "manifest_version": 3,
+  "author": "Grupo 5",
+  "permissions": ["storage", "tabs", "activeTab"],
+  "action": {
+    "default_title": "SafePass",
+    "default_popup": "./index.html"
+  },
+  "icons": {
+    "16": "./Logo.png",
+    "48": "./Logo.png",
+    "128": "./Logo.png"
+  }
+}
