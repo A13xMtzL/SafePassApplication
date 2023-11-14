@@ -1,7 +1,22 @@
-# SafePass
+<!-- Crea un índice con las dos opciones de títulos Principales -->
 
+
+# SafePass
 SafePass te permite realizar multiples acciones para mejorar tu seguridad digital como generar contraseñas aleatorias, comprobar la seguridad de tus contraseñas y comprobar si han sido filtradas.
 ![Alt text](imgs/Captura.png)
+
+# Tabla de Contenidos
+- [SafePass](#safepass)
+  - [Miembros del equipo](#miembros-del-equipo)
+  - [Instalación](#instalación)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+  - [Funcionalidades](#funcionalidades)
+  - [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Instrucciones para importar la extensión en el navegador](#instrucciones-para-importar-la-extensión-en-el-navegador)
+  - [Vista Previa de extensión](#vista-previa-de-cambios)
+  - [Construyendo la extensión](#construyendo-la-extensión)
+  - [Cargando la extensión localmente](#cargando-la-extensión-localmente)
 
 ## Miembros del equipo
 
@@ -49,7 +64,7 @@ Para comenzar con SafePass, siga estos pasos
 - Flask
 
 # Instrucciones para importar la extensión en el navegador
-## Vista Previa de Cambios
+## Vista Previa de extensión
 ![image](https://github.com/A13xMtzL/SafePassApplication/assets/99751453/3d01e2fc-b877-4af2-bb70-d260af3a517a)
 
 
