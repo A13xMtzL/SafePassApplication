@@ -16,50 +16,32 @@ export default function PasswordChecker() {
     const length = password.length
 
     if (
-        (hasUppercase &&
+      (hasUppercase &&
         hasLowercase &&
         hasDigit &&
-        hasSpecialChar && 
+        hasSpecialChar &&
         length >= 13) ||
-        (hasUppercase &&
+      (hasUppercase && hasLowercase && hasDigit && length >= 14) ||
+      (hasUppercase && hasLowercase && length >= 15) ||
+      ((hasUppercase || hasLowercase || hasSpecialChar) && length >= 18) ||
+      (hasDigit && length >= 20)
+    ) {
+      setPasswordStrength('Fuerte')
+    } else if (
+      (hasUppercase &&
         hasLowercase &&
         hasDigit &&
-        length >= 14) ||
-        (hasUppercase &&
-        hasLowercase &&
-        length >= 15) ||
-        ((hasUppercase ||
-        hasLowercase ||
-        hasSpecialChar) &&
-        length >= 18) ||
-        (hasDigit &&
-        length >= 20)
-      ) {
-        setPasswordStrength('Fuerte')
-      } else if (
-        (hasUppercase &&
-        hasLowercase &&
-        hasDigit &&
-        hasSpecialChar && 
+        hasSpecialChar &&
         length >= 9) ||
-        (hasUppercase &&
-        hasLowercase &&
-        hasDigit &&
-        length >= 10) ||
-        (hasUppercase &&
-        hasLowercase &&
-        length >= 11) ||
-        ((hasUppercase ||
-        hasLowercase ||
-        hasSpecialChar) &&
-        length >= 12) ||
-        (hasDigit &&
-        length >= 16)
-      ) {
-        setPasswordStrength('Media')
-      } else {
-        setPasswordStrength('Débil')
-      }
+      (hasUppercase && hasLowercase && hasDigit && length >= 10) ||
+      (hasUppercase && hasLowercase && length >= 11) ||
+      ((hasUppercase || hasLowercase || hasSpecialChar) && length >= 12) ||
+      (hasDigit && length >= 16)
+    ) {
+      setPasswordStrength('Media')
+    } else {
+      setPasswordStrength('Débil')
+    }
   }, [password])
 
   useEffect(() => {
@@ -107,7 +89,7 @@ export default function PasswordChecker() {
   const passwordInputType = showPassword ? 'text' : 'password'
 
   return (
-    <div className="css-glow rounded-lg bg-[#ffbc2d11] dark:bg-[#2dffc310] p-6 font-mono">
+    <div className="css-glow rounded-lg bg-[#ffbc2d11] p-6 font-mono dark:bg-[#2dffc310]">
       <h1 className="m-2 text-3xl font-semibold text-slate-800 dark:text-slate-300">
         Validador de seguridad <br /> de contraseñas
       </h1>
@@ -120,7 +102,7 @@ export default function PasswordChecker() {
         autoComplete="off"
       />
       <button
-        className="ml-2 mt-3 rounded p-2 text-gray-50 shadow-lg transition duration-300 ease-in-out hover:scale-x-105 dark:hover:bg-teal-700 active:scale-x-100 dark:bg-teal-600 bg-teal-700 hover:bg-teal-800 dark:text-gray-900"
+        className="ml-2 mt-3 rounded bg-teal-700 p-2 text-gray-50 shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-teal-800 active:scale-x-100 dark:bg-teal-600 dark:text-gray-900 dark:hover:bg-teal-700"
         onClick={togglePasswordVisibility}
         title={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
         aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
