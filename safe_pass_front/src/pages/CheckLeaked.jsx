@@ -43,7 +43,7 @@ export default function CheckLeaked() {
             onSubmit={handleCheckLeaked}
           >
             <div className="mb-4">
-              <h1 className="m-2 mb-4 text-3xl font-semibold dark:text-slate-300 text-slate-700">
+              <h1 className="m-2 mb-4 text-3xl font-semibold text-slate-700 dark:text-slate-300">
                 Verificación de contraseñas filtradas
               </h1>
               <label
@@ -63,7 +63,7 @@ export default function CheckLeaked() {
             </div>
             <div className=" items-center justify-between">
               <button
-                className="rounded bg-green-500 dark:bg-lime-700 px-4 py-2 font-bold text-white transition duration-300 ease-in-out  hover:scale-x-105 dark:hover:bg-lime-800 hover:bg-green-600 active:scale-x-100"
+                className="rounded bg-green-500 px-4 py-2 font-bold text-white transition duration-300 ease-in-out hover:scale-x-105  hover:bg-green-600 active:scale-x-100 dark:bg-lime-700 dark:hover:bg-lime-800"
                 type="submit"
               >
                 Revisar si <br />
