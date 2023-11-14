@@ -47,3 +47,25 @@ Para comenzar con SafePass, siga estos pasos
 - TailwindCSS
 - Python
 - Flask
+
+# Instrucciones para importar la extensión en el navegador
+## Vista Previa de Cambios
+![image](https://github.com/A13xMtzL/SafePassApplication/assets/99751453/3d01e2fc-b877-4af2-bb70-d260af3a517a)
+
+
+## Construyendo la extensión
+
+Para crear la extensión, sigue estos pasos:
+
+1. Instale las dependencias del proyecto ejecutando `npm install` en el directorio raíz del proyecto.
+2. Cree la versión de producción del proyecto ejecutando `npm run build` en la carpeta `"safe_pass_front"`. Esto creará un directorio `dist` con los archivos de extensión integrados.
+
+## Cargando la extensión localmente
+
+Para cargar la extensión en su navegador Chrome localmente, realiza estos pasos:
+
+1. Abre Chrome y navegue hasta `chrome://extensions`.
+2. Habilite el modo Desarrollador haciendo clic en el interruptor de palanca en la esquina superior derecha.
+3. Haga clic en "Cargar descomprimido" y seleccione el directorio `dist` creado cuando creó el proyecto.
+
+La extensión SafePass ahora debería estar cargada en su navegador y lista para usar.
