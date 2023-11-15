@@ -50,10 +50,10 @@ export default function Home() {
   }
   return (
     <div>
-      <h1 className="pb-2 font-mono text-5xl dark:text-slate-200 text-slate-800">
+      <h1 className="pb-2 font-mono text-5xl text-slate-800 dark:text-slate-200">
         SafePass
       </h1>
-      <div className="max-w-20rem overflow-hidden rounded-md dark:bg-sky-950  bg-[#48474d] shadow-md">
+      <div className="max-w-20rem overflow-hidden rounded-md bg-[#48474d]  shadow-md dark:bg-sky-950">
         <div className="px-4 py-2 ">
           <h4 className="mb-2 text-lg font-bold text-slate-200">
             El primer paso hacia una mayor seguridad
@@ -67,7 +67,7 @@ export default function Home() {
       </div>
       <div className="flex items-center justify-center">
         <img
-          className="w-40 transform pt-4 transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-12 cursor-pointer"
+          className="w-40 transform cursor-pointer pt-4 transition-transform duration-300 ease-in-out hover:rotate-12 hover:scale-110"
           src="/Logo.png"
           alt="Safe Pass Logo"
           onClick={toggleAdditionalImages}
