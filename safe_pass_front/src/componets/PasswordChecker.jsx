@@ -77,7 +77,7 @@ export default function PasswordChecker() {
   }, [passwordStrength])
 
   const passwordStrengthClasses = classNames(
-    'mt-4 items-center justify-center rounded p-2',
+    'mt-4 text-white dark:text-black shadow shadow-lg items-center justify-center rounded p-2 transition',
     getBarColor(),
     getBarLength(),
   )
@@ -95,7 +95,7 @@ export default function PasswordChecker() {
       </h1>
       <input
         type={passwordInputType}
-        className="my-3 w-full rounded border border-teal-600 p-3 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-700"
+        className="my-3 w-full rounded border border-teal-600 bg-slate-50 p-3 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-700 dark:bg-gray-800 dark:placeholder-gray-400"
         placeholder="Introduce tu contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -110,12 +110,14 @@ export default function PasswordChecker() {
         {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña
       </button>
       {passwordStrength && password.length > 0 && (
-        <div
-          className={passwordStrengthClasses}
-          role="status"
-          aria-live="polite"
-        >
-          <p>{passwordStrength}</p>
+        <div className="flex items-center justify-center">
+          <div
+            className={passwordStrengthClasses}
+            role="status"
+            aria-live="polite"
+          >
+            <p>{passwordStrength}</p>
+          </div>
         </div>
       )}
     </div>
