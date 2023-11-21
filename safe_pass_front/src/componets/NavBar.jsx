@@ -45,6 +45,9 @@ export default function NavBar() {
               />
             </svg>
           </button>
+          <div className="flex items-center md:order-3">
+            <SwitchModeButton />
+          </div>
         </div>
         <div
           className={`${
@@ -92,9 +95,6 @@ export default function NavBar() {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="flex items-center md:order-3">
-          <SwitchModeButton />
         </div>
       </div>
     </nav>
