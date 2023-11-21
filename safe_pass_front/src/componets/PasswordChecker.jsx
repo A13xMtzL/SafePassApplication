@@ -95,7 +95,7 @@ export default function PasswordChecker() {
       </h1>
       <input
         type={passwordInputType}
-        className="my-3 w-full rounded border border-teal-600 bg-slate-50 p-3 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-700 dark:bg-gray-800 dark:placeholder-gray-400"
+        className="my-3 w-full rounded border border-teal-600 bg-slate-50 p-3 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-700 dark:bg-gray-800 dark:placeholder-gray-400 dark:text-white"
         placeholder="Introduce tu contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
