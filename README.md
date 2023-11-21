@@ -14,7 +14,7 @@ SafePass te permite realizar multiples acciones para mejorar tu seguridad digita
   - [Funcionalidades](#funcionalidades)
   - [Tecnologías utilizadas](#tecnologías-utilizadas)
 - [Instrucciones para importar la extensión en el navegador](#instrucciones-para-importar-la-extensión-en-el-navegador)
-  - [Vista Previa de extensión](#vista-previa-de-cambios)
+  - [Vista Previa de extensión](#vista-previa-de-extensión)
   - [Construyendo la extensión](#construyendo-la-extensión)
   - [Cargando la extensión localmente](#cargando-la-extensión-localmente)
 
@@ -65,7 +65,9 @@ Para comenzar con SafePass, siga estos pasos
 
 # Instrucciones para importar la extensión en el navegador
 ## Vista Previa de extensión
-![image](https://github.com/A13xMtzL/SafePassApplication/assets/99751453/3d01e2fc-b877-4af2-bb70-d260af3a517a)
+<!-- ![image](https://github.com/A13xMtzL/SafePassApplication/assets/99751453/3d01e2fc-b877-4af2-bb70-d260af3a517a) -->
+![image](imgs/Captura_Extension.png)
+
 
 
 ## Construyendo la extensión
