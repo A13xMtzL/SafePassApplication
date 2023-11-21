@@ -1,20 +1,24 @@
 #root {
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  min-height: 100vh;
+  @apply bg-light-mode dark:bg-dark-mode;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  max-width: 1280px;
+  /*! max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
-
+html,
+body {
+  /* min-height: 100vh; */
+  overflow: auto;
+}
 @media (prefers-color-scheme: dark) {
   .css-glow {
     -webkit-box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.032);
@@ -31,18 +35,20 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    background-color: #080c17;
+    background-color: #080c17; 
+    @apply bg-[#080c17]
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #f5f3f5;
-  }
-}
+    background-color: #f5f3f5; 
+    @apply bg-[#f5f3f5]
 
+  }
+} */
 /*
 .logo {
   height: 6em;
