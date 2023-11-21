@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 
-export default function ModeButton() {
+export default function SwitchModeButton() {
   const [darkMode, setDarkMode] = useState(false) // state variable to track current mode
 
   const toggleDarkMode = useCallback(() => {
@@ -17,8 +17,8 @@ export default function ModeButton() {
   return (
     <button
       onClick={toggleDarkMode}
-      className={`text-sm font-medium ${
-        darkMode ? 'text-white' : 'text-gray-900'
+      className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-500 ease-in-out ${
+        darkMode ? 'bg-white text-gray-900' : 'bg-gray-900 text-white'
       } focus:outline-none`}
     >
       {darkMode ? 'Light Mode' : 'Dark Mode'}

@@ -44,8 +44,8 @@ export default function PasswordAnimation({ password }) {
 
   return (
     <div className="">
-      <div className="flex items-center">
-        <h1 className="mb-5 mt-5 text-2xl text-sky-500">
+      <div className="flex items-center justify-center">
+        <h1 className="mb-3 text-2xl text-sky-500">
           Tu contraseña generada es:
         </h1>
         <BsFillClipboardFill
@@ -56,7 +56,7 @@ export default function PasswordAnimation({ password }) {
           onClick={handleCopy}
         />
       </div>
-      <div className="max-w-sm items-center justify-center rounded-md border border-transparent hover:border-yellow-800">
+      <div className="flex max-w-sm items-center justify-center rounded-md border border-transparent hover:border-yellow-800">
         <span className="mr-3 text-xl font-semibold text-teal-600">
           {generatedPassword}
           <Cursor cursorBlinking={true} cursorColor="#0D9488" />

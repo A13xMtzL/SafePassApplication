@@ -67,13 +67,13 @@ export default function Generator() {
       </h1>
       <form className="m-4" onSubmit={handleSubmit}>
         <div className="mb-2 flex items-center">
-          <label htmlFor="length" className="mr-2">
+          <label className="dark:text-white" htmlFor="length">
             Longitud:
           </label>
           <input
             type="number"
             id="length"
-            className="w-16 rounded border border-yellow-800 p-2 focus:outline-none focus:ring-2 focus:ring-yellow-800 dark:bg-slate-900"
+            className="w-16 rounded border border-yellow-800 bg-slate-100 p-2 text-black focus:outline-none focus:ring-2 focus:ring-yellow-800 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
             min="6"
             max="50"
             value={selection.length}
@@ -94,7 +94,9 @@ export default function Generator() {
             checked={selection.lowercase}
             onChange={handleOptionChange}
           />
-          <label htmlFor="lowercase">Letras minúsculas</label>
+          <label className="dark:text-white" htmlFor="lowercase">
+            Letras minúsculas
+          </label>
         </div>
         <div className="mb-2 flex items-center">
           <input
@@ -105,7 +107,9 @@ export default function Generator() {
             checked={selection.uppercase}
             onChange={handleOptionChange}
           />
-          <label htmlFor="uppercase">Letras mayúsculas</label>
+          <label className="dark:text-white" htmlFor="uppercase">
+            Letras mayúsculas
+          </label>
         </div>
         <div className="mb-2 flex items-center">
           <input
@@ -116,7 +120,9 @@ export default function Generator() {
             checked={selection.numbers}
             onChange={handleOptionChange}
           />
-          <label htmlFor="numbers">Números</label>
+          <label className="dark:text-white" htmlFor="numbers">
+            Números
+          </label>
         </div>
         <div className="mb-2 flex items-center">
           <input
@@ -127,7 +133,9 @@ export default function Generator() {
             checked={selection.symbols}
             onChange={handleOptionChange}
           />
-          <label htmlFor="symbols">Símbolos</label>
+          <label className="dark:text-white" htmlFor="symbols">
+            Símbolos
+          </label>
         </div>
         <button
           type="submit"

@@ -9,18 +9,18 @@ export default function Home() {
       <div className="mt-4 flex justify-center">
         {/* Primera imagen con texto */}
         <Link to="/generator">
-          <div className="m-4 text-center">
+          <div className="m-4 text-center dark:text-white">
             <img
               src="/PasswordGen.jpeg"
               alt="Generación de contraseña segura"
-              className="max-w-full"
+              className=" max-w-full"
             />
             <p>Genera contraseñas seguras</p>
           </div>
         </Link>
         {/* Segunda imagen con texto */}
         <Link to="/leaked">
-          <div className="m-4 text-center">
+          <div className="m-4 text-center dark:text-white">
             <img
               src="/PwnedCheck.jpeg"
               alt="Comprobación de contraseñas"
@@ -31,7 +31,7 @@ export default function Home() {
         </Link>
         {/* Tercera imagen con texto */}
         <Link to="/validator">
-          <div className="m-4 text-center">
+          <div className="m-4 text-center dark:text-white">
             <img
               src="/PasswordVal.jpeg"
               alt="Validación de contraseñas"
@@ -53,7 +53,7 @@ export default function Home() {
       <h1 className="pb-2 font-mono text-5xl text-slate-800 dark:text-slate-200">
         SafePass
       </h1>
-      <div className="max-w-20rem overflow-hidden rounded-md bg-[#48474d]  shadow-md dark:bg-sky-950">
+      <div className="max-w-20rem z-10 overflow-hidden rounded-md bg-[#48474d]  shadow-md dark:bg-sky-950">
         <div className="px-4 py-2 ">
           <h4 className="mb-2 text-lg font-bold text-slate-200">
             El primer paso hacia una mayor seguridad

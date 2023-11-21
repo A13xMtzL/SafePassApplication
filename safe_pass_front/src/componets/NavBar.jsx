@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import SwitchModeButton from './SwitchModeButton'
 
 export default function NavBar() {
   const [isCollapsed, setIsCollapsed] = useState(true)
@@ -44,6 +45,9 @@ export default function NavBar() {
               />
             </svg>
           </button>
+          <div className="flex items-center md:order-3">
+            <SwitchModeButton />
+          </div>
         </div>
         <div
           className={`${
