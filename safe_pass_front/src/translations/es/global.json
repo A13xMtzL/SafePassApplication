@@ -6,9 +6,50 @@
     "title": "El primer paso hacia una mayor seguridad",
     "description": "SafePass te permite realizar multiples acciones para mejorar tu seguridad digital como generar contraseñas aleatorias, comprobar la seguridad de tus contraseñas y comprobar si han sido filtradas."
   },
-  "home-images":{
-    "generator":"Generación de contraseña segura",
-    "checker":"Comprueba si tienes contraseñas vulneradas",
-    "validator":"Comprueba la seguridad de tus contraseñas"
+  "home-images": {
+    "generator": "Generación de contraseña segura",
+    "checker": "Comprueba si tienes contraseñas vulneradas",
+    "validator": "Comprueba la seguridad de tus contraseñas"
+  },
+  "validator-component": {
+    "title": "Validador de seguridad",
+    "title2": "de contraseñas",
+    "placeholder": "Introduce tu contraseña",
+    "show": "Mostrar contraseña",
+    "hide": "Ocultar contraseña",
+    "strong": "Fuerte",
+    "medium": "Media",
+    "weak": "Débil"
+  },
+  "generator-component": {
+    "title": "Generar contraseña segura",
+    "length": "Longitud",
+    "uppercase": "Letras mayúsculas",
+    "lowercase": "Letras minúsculas",
+    "numbers": "Números",
+    "symbols": "Símbolos",
+    "generate": "Generar contraseña"
+  },
+  "password-animation": {
+    "title": "Tu contraseña generada es:",
+    "copied": "¡Copiado al portapapeles!"
+  },
+  "checker-component": {
+    "title": "Verificación de contraseñas filtradas",
+    "password": "Introduce tu contraseña:",
+    "check": "Revisar si",
+    "check2": "existen filtraciones",
+    "leaked": "¡La contraseña ha sido filtrada!",
+    "not-leaked": "¡La contraseña no ha sido filtrada! ¡Enhorabuena!"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "generator": "Generador",
+    "checker": "Comprobador de contraseñas vulneradas",
+    "validator": "Validador",
+    "language": "Idioma",
+    "english": "Inglés",
+    "spanish": "Español",
+    "french": "Francés"
   }
 }

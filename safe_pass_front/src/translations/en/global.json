@@ -5,5 +5,51 @@
   "home": {
     "title": "The first step towards greater security",
     "description": "SafePass allows you to perform multiple actions to improve your digital security such as generating random passwords, checking the security of your passwords and checking if they have been leaked."
+  },
+  "home-images": {
+    "generator": "Secure password generation",
+    "checker": "Check if you have compromised passwords",
+    "validator": "Check the security of your passwords"
+  },
+  "validator-component": {
+    "title": "Security validator",
+    "title2": "password",
+    "placeholder": "Enter your password",
+    "show": "Show password",
+    "hide": "Hide password",
+    "strong": "Strong",
+    "medium": "Medium",
+    "weak": "Weak"
+  },
+  "generator-component": {
+    "title": "Generate strong password",
+    "length": "Length",
+    "uppercase": "Capital letters",
+    "lowercase": "Lowercase letters",
+    "numbers": "Numbers",
+    "symbols": "Symbols",
+    "generate": "Generate password"
+  },
+  "password-animation": {
+    "title": "Your generated password is:",
+    "copied": "Copied to the clipboard!"
+  },
+  "checker-component": {
+    "title": "Checking leaked passwords",
+    "password": "Enter your password:",
+    "check": "Check if",
+    "check2": "leaks exist",
+    "leaked": "The password has been leaked!",
+    "not-leaked": "The password has not been leaked! Congratulations!"
+  },
+  "navbar": {
+    "home": "Home",
+    "generator": "Generator",
+    "checker": "Broken password checker",
+    "validator": "Validator",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Spanish",
+    "french": "French"
   }
 }
