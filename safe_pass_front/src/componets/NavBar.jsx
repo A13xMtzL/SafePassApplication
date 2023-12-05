@@ -1,8 +1,8 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
-import { useCallback, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import LanguajeSelector from './LanguageSelector'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import LanguageSelector from './LanguageSelector'
 import SwitchModeButton from './SwitchModeButton'
 
 export default function NavBar() {
@@ -47,11 +47,12 @@ export default function NavBar() {
             </svg>
           </button>
           <div className="flex items-center md:order-3">
+            {/* Botones de Cambio de Modo */}
             <SwitchModeButton />
+            {/* Botón de cambio de idioma */}
+            <LanguageSelector />
           </div>
-          <div className="flex items-center md:order-3">
-            <LanguajeSelector />
-          </div>
+          <div className="flex items-center md:order-3"></div>
         </div>
         <div
           className={`${
