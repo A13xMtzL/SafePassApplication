@@ -1,0 +1,14 @@
+{
+  "header": {
+    "hello-world": "Hola Mundo"
+  },
+  "home": {
+    "title": "El primer paso hacia una mayor seguridad",
+    "description": "SafePass te permite realizar multiples acciones para mejorar tu seguridad digital como generar contraseñas aleatorias, comprobar la seguridad de tus contraseñas y comprobar si han sido filtradas."
+  },
+  "home-images":{
+    "generator":"Generación de contraseña segura",
+    "checker":"Comprueba si tienes contraseñas vulneradas",
+    "validator":"Comprueba la seguridad de tus contraseñas"
+  }
+}

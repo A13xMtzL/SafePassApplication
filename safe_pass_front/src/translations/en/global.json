@@ -1,0 +1,9 @@
+{
+  "header": {
+    "hello-world": "Hello World"
+  },
+  "home": {
+    "title": "The first step towards greater security",
+    "description": "SafePass allows you to perform multiple actions to improve your digital security such as generating random passwords, checking the security of your passwords and checking if they have been leaked."
+  }
+}
