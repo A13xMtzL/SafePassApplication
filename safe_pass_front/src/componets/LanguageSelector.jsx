@@ -18,7 +18,7 @@ export default function LanguageSelector() {
           aria-haspopup="true"
           onClick={() => setIsOpen(!isOpen)}
         >
-          Idiomas
+          {t('navbar.language')}
           <TbWorld
             size={20}
             className="items-center justify-center text-white dark:text-gray-900"
@@ -51,25 +51,34 @@ export default function LanguageSelector() {
               className="block px-4 py-2 text-sm text-gray-900"
               tabIndex={-1}
               id="menu-item-0"
-              onClick={() => i18n.changeLanguage('es')}
+              onClick={() => {
+                i18n.changeLanguage('es')
+                setIsOpen(false)
+              }}
             >
-              Español
+              {t('navbar.spanish')}
             </button>
             <button
               className="block px-4 py-2 text-sm text-gray-900"
               tabIndex={-1}
               id="menu-item-1"
-              onClick={() => i18n.changeLanguage('en')}
+              onClick={() => {
+                i18n.changeLanguage('en')
+                setIsOpen(false)
+              }}
             >
-              English
+              {t('navbar.english')}
             </button>
             <button
               className="block px-4 py-2 text-sm text-gray-900"
               tabIndex={-1}
               id="menu-item-2"
-              onClick={() => i18n.changeLanguage('fr')}
+              onClick={() => {
+                i18n.changeLanguage('fr')
+                setIsOpen(false)
+              }}
             >
-              Français
+              {t('navbar.french')}
             </button>
           </div>
         </div>
