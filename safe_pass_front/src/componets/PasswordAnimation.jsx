@@ -3,6 +3,7 @@
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { BsFillClipboardFill } from 'react-icons/bs'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 
@@ -11,6 +12,7 @@ PasswordAnimation.propTypes = {
 }
 
 export default function PasswordAnimation({ password }) {
+  const { t } = useTranslation('global')
   const [generatedPassword] = useTypewriter({
     words: [password],
     delaySpeed: 50,
@@ -46,7 +48,7 @@ export default function PasswordAnimation({ password }) {
     <div className="">
       <div className="flex items-center justify-center">
         <h1 className="mb-3 text-2xl text-sky-500">
-          Tu contraseña generada es:
+          {t('password-animation.title')}
         </h1>
         <BsFillClipboardFill
           alt="Copy to clipboard"
@@ -64,7 +66,7 @@ export default function PasswordAnimation({ password }) {
       </div>
       {isCopied && (
         <p className="animate-fade-in mt-3 items-center justify-center text-green-600">
-          ¡Copiado al portapapeles!
+          {t('password-animation.copied')}
         </p>
       )}
     </div>
