@@ -9,6 +9,7 @@ import './index.css'
 
 import global_es from './translations/es/global.json'
 import global_en from './translations/en/global.json'
+import global_fr from './translations/fr/global.json'
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -19,6 +20,9 @@ i18next.init({
     },
     en: {
       global: global_en,
+    },
+    fr: {
+      global: global_fr,
     },
   },
 })
