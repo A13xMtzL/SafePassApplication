@@ -53,7 +53,7 @@ export default function CheckLeaked() {
                 Introduce tu contraseña:
               </label>
               <input
-                className="focus:lime-600 w-full appearance-none rounded border border-lime-700 bg-slate-50 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-lime-700 dark:bg-gray-800 dark:placeholder-gray-400 dark:text-white"
+                className="focus:lime-600 w-full appearance-none rounded border border-lime-700 bg-slate-50 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-lime-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
                 id="password"
                 type="password"
                 value={password}

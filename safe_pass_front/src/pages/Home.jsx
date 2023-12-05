@@ -49,7 +49,7 @@ export default function Home() {
     setShowAdditionalImages(!showAdditionalImages)
   }
   return (
-    <div>
+    <div className="w-10/12">
       <h1 className="pb-2 font-mono text-5xl text-slate-800 dark:text-slate-200">
         SafePass
       </h1>

@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import LanguajeSelector from './LanguageSelector'
 import SwitchModeButton from './SwitchModeButton'
 
 export default function NavBar() {
@@ -47,6 +48,9 @@ export default function NavBar() {
           </button>
           <div className="flex items-center md:order-3">
             <SwitchModeButton />
+          </div>
+          <div className="flex items-center md:order-3">
+            <LanguajeSelector />
           </div>
         </div>
         <div
