@@ -1,5 +1,6 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
+import i18next from 'i18next'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TbWorld } from 'react-icons/tb'
@@ -7,6 +8,12 @@ import { TbWorld } from 'react-icons/tb'
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
   const [t, i18n] = useTranslation('global')
+
+  const changeLanguage = (language) => {
+    i18next.changeLanguage(language)
+    localStorage.setItem('i18nextLng', language)
+  }
+
   return (
     <div className="relative inline-block text-left">
       <div className="ml-1">
@@ -52,7 +59,7 @@ export default function LanguageSelector() {
               tabIndex={-1}
               id="menu-item-0"
               onClick={() => {
-                i18n.changeLanguage('es')
+                changeLanguage('es')
                 setIsOpen(false)
               }}
             >
@@ -63,7 +70,7 @@ export default function LanguageSelector() {
               tabIndex={-1}
               id="menu-item-1"
               onClick={() => {
-                i18n.changeLanguage('en')
+                changeLanguage('en')
                 setIsOpen(false)
               }}
             >
@@ -74,7 +81,7 @@ export default function LanguageSelector() {
               tabIndex={-1}
               id="menu-item-2"
               onClick={() => {
-                i18n.changeLanguage('fr')
+                changeLanguage('fr')
                 setIsOpen(false)
               }}
             >

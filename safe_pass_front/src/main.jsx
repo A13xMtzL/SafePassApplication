@@ -7,13 +7,16 @@ import { I18nextProvider } from 'react-i18next'
 import App from './App.jsx'
 import './index.css'
 
-import global_es from './translations/es/global.json'
 import global_en from './translations/en/global.json'
+import global_es from './translations/es/global.json'
 import global_fr from './translations/fr/global.json'
+
+const defaultLanguage = 'es'
+const savedLanguage = localStorage.getItem('i18nextLng') || defaultLanguage
 
 i18next.init({
   interpolation: { escapeValue: false },
-  lng: 'es',
+  lng: savedLanguage,
   resources: {
     es: {
       global: global_es,
