@@ -1,7 +1,9 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
-import { useCallback, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import LanguageSelector from './LanguageSelector'
 import SwitchModeButton from './SwitchModeButton'
 
 export default function NavBar() {
@@ -11,6 +13,7 @@ export default function NavBar() {
     setIsCollapsed(!isCollapsed)
   }
 
+  const { t } = useTranslation('global')
   return (
     <nav className="fixed left-0 top-0 z-20 w-full border-b border-gray-200 bg-white dark:border-gray-900 dark:bg-black">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
@@ -46,8 +49,12 @@ export default function NavBar() {
             </svg>
           </button>
           <div className="flex items-center md:order-3">
+            {/* Botones de Cambio de Modo */}
             <SwitchModeButton />
+            {/* Botón de cambio de idioma */}
+            <LanguageSelector />
           </div>
+          <div className="flex items-center md:order-3"></div>
         </div>
         <div
           className={`${
@@ -63,7 +70,7 @@ export default function NavBar() {
                 onClick={setIsCollapsed}
                 aria-current="page"
               >
-                Home
+                {t('navbar.home')}
               </Link>
             </li>
             <li>
@@ -72,7 +79,7 @@ export default function NavBar() {
                 className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                 onClick={setIsCollapsed}
               >
-                Generador
+                {t('navbar.generator')}
               </Link>
             </li>
             <li>
@@ -81,7 +88,7 @@ export default function NavBar() {
                 className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                 onClick={setIsCollapsed}
               >
-                Validador
+                {t('navbar.validator')}
               </Link>
             </li>
 
@@ -91,7 +98,7 @@ export default function NavBar() {
                 className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                 onClick={setIsCollapsed}
               >
-                Comprobar contraseñas vulneradas
+                {t('navbar.checker')}
               </Link>
             </li>
           </ul>

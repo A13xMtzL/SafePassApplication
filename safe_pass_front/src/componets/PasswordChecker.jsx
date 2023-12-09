@@ -2,6 +2,7 @@
 
 import classNames from 'classnames'
 import { useCallback, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function PasswordChecker() {
   const [password, setPassword] = useState('')
@@ -26,7 +27,7 @@ export default function PasswordChecker() {
       ((hasUppercase || hasLowercase || hasSpecialChar) && length >= 18) ||
       (hasDigit && length >= 20)
     ) {
-      setPasswordStrength('Fuerte')
+      setPasswordStrength(t('validator-component.strong'))
     } else if (
       (hasUppercase &&
         hasLowercase &&
@@ -38,9 +39,9 @@ export default function PasswordChecker() {
       ((hasUppercase || hasLowercase || hasSpecialChar) && length >= 12) ||
       (hasDigit && length >= 16)
     ) {
-      setPasswordStrength('Media')
+      setPasswordStrength(t('validator-component.medium'))
     } else {
-      setPasswordStrength('Débil')
+      setPasswordStrength(t('validator-component.weak'))
     }
   }, [password])
 
@@ -87,16 +88,18 @@ export default function PasswordChecker() {
   }
 
   const passwordInputType = showPassword ? 'text' : 'password'
-
+  // Para las traducciones
+  const { t } = useTranslation('global')
   return (
     <div className="css-glow rounded-lg bg-[#ffbc2d11] p-6 font-mono dark:bg-[#2dffc310]">
       <h1 className="m-2 text-3xl font-semibold text-slate-800 dark:text-slate-300">
-        Validador de seguridad <br /> de contraseñas
+        {t('validator-component.title')} <br />{' '}
+        {t('validator-component.title2')}
       </h1>
       <input
         type={passwordInputType}
-        className="my-3 w-full rounded border border-teal-600 bg-slate-50 p-3 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-700 dark:bg-gray-800 dark:placeholder-gray-400 dark:text-white"
-        placeholder="Introduce tu contraseña"
+        className="my-3 w-full rounded border border-teal-600 bg-slate-50 p-3 placeholder-gray-500 shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-700 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
+        placeholder={t('validator-component.placeholder')}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         autoComplete="off"
@@ -104,10 +107,20 @@ export default function PasswordChecker() {
       <button
         className="ml-2 mt-3 rounded bg-teal-700 p-2 text-gray-50 shadow-lg transition duration-300 ease-in-out hover:scale-x-105 hover:bg-teal-800 active:scale-x-100 dark:bg-teal-600 dark:text-gray-900 dark:hover:bg-teal-700"
         onClick={togglePasswordVisibility}
-        title={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
-        aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
+        title={
+          showPassword
+            ? t('validator-component.hide')
+            : t('validator-component.show')
+        }
+        aria-label={
+          showPassword
+            ? t('validator-component.hide')
+            : t('validator-component.show')
+        }
       >
-        {showPassword ? 'Ocultar' : 'Mostrar'} Contraseña
+        {showPassword
+          ? t('validator-component.hide')
+          : t('validator-component.show')}
       </button>
       {passwordStrength && password.length > 0 && (
         <div className="flex items-center justify-center">

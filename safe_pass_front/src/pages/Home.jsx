@@ -1,6 +1,7 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
               alt="Generación de contraseña segura"
               className=" max-w-full"
             />
-            <p>Genera contraseñas seguras</p>
+            <p>{t('home-images.generator')}</p>
           </div>
         </Link>
         {/* Segunda imagen con texto */}
@@ -26,7 +27,7 @@ export default function Home() {
               alt="Comprobación de contraseñas"
               className="max-w-full"
             />
-            <p>Comprueba si tienes contraseñas vulneradas</p>
+            <p>{t('home-images.checker')}</p>
           </div>
         </Link>
         {/* Tercera imagen con texto */}
@@ -37,7 +38,7 @@ export default function Home() {
               alt="Validación de contraseñas"
               className="max-w-full"
             />
-            <p>Valida tus contraseñas</p>
+            <p>{t('home-images.validator')}</p>
           </div>
         </Link>
       </div>
@@ -48,21 +49,19 @@ export default function Home() {
   const toggleAdditionalImages = () => {
     setShowAdditionalImages(!showAdditionalImages)
   }
+
+  const { t } = useTranslation('global')
   return (
-    <div>
+    <div className="w-10/12">
       <h1 className="pb-2 font-mono text-5xl text-slate-800 dark:text-slate-200">
         SafePass
       </h1>
       <div className="max-w-20rem z-10 overflow-hidden rounded-md bg-[#48474d]  shadow-md dark:bg-sky-950">
         <div className="px-4 py-2 ">
           <h4 className="mb-2 text-lg font-bold text-slate-200">
-            El primer paso hacia una mayor seguridad
+            {t('home.title')}
           </h4>
-          <p className="text-slate-200">
-            SafePass te permite realizar multiples acciones para mejorar tu
-            seguridad digital como generar contraseñas aleatorias, comprobar la
-            seguridad de tus contraseñas y comprobar si han sido filtradas.
-          </p>
+          <p className="text-slate-200">{t('home.description')}</p>
         </div>
       </div>
       <div className="flex items-center justify-center">

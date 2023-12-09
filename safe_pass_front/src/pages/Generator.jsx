@@ -1,6 +1,7 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
 import { useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import PasswordAnimation from '../componets/PasswordAnimation'
 
 export default function Generator() {
@@ -60,15 +61,17 @@ export default function Generator() {
     [generatePassword],
   )
 
+  // Para traducir el componente, se puede usar el hook useTranslation de react-i18next
+  const { t } = useTranslation('global')
   return (
     <div className="font-mono">
       <h1 className="m-2 text-3xl font-semibold text-slate-800 dark:text-slate-300">
-        Generar contraseña segura
+        {t('generator-component.title')}
       </h1>
       <form className="m-4" onSubmit={handleSubmit}>
         <div className="mb-2 flex items-center">
           <label className="dark:text-white" htmlFor="length">
-            Longitud:
+            {t('generator-component.length')}
           </label>
           <input
             type="number"
@@ -95,7 +98,7 @@ export default function Generator() {
             onChange={handleOptionChange}
           />
           <label className="dark:text-white" htmlFor="lowercase">
-            Letras minúsculas
+            {t('generator-component.lowercase')}
           </label>
         </div>
         <div className="mb-2 flex items-center">
@@ -108,7 +111,7 @@ export default function Generator() {
             onChange={handleOptionChange}
           />
           <label className="dark:text-white" htmlFor="uppercase">
-            Letras mayúsculas
+            {t('generator-component.uppercase')}
           </label>
         </div>
         <div className="mb-2 flex items-center">
@@ -121,7 +124,7 @@ export default function Generator() {
             onChange={handleOptionChange}
           />
           <label className="dark:text-white" htmlFor="numbers">
-            Números
+            {t('generator-component.numbers')}
           </label>
         </div>
         <div className="mb-2 flex items-center">
@@ -134,7 +137,7 @@ export default function Generator() {
             onChange={handleOptionChange}
           />
           <label className="dark:text-white" htmlFor="symbols">
-            Símbolos
+            {t('generator-component.symbols')}
           </label>
         </div>
         <button
@@ -142,7 +145,7 @@ export default function Generator() {
           id="submit"
           className="ml-3 rounded bg-yellow-600 px-4 py-2 font-bold  text-white transition duration-300 ease-in-out hover:scale-x-105 hover:bg-yellow-700 active:scale-x-100 dark:bg-yellow-800 dark:hover:bg-yellow-900"
         >
-          Generar contraseña
+          {t('generator-component.generate')}
         </button>
       </form>
       {generatedPassword && (
