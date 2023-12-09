@@ -45,8 +45,8 @@
     "checker": "Vérificateur de mot de passe cassé",
     "validator": "Validateur",
     "language": "Langue",
-    "english": "anglais",
-    "spanish": "espagnol",
-    "french": "français"
+    "english": "Anglais",
+    "spanish": "Espagnol",
+    "french": "Français"
   }
 }

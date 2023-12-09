@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import PasswordAnimation from '../componets/PasswordAnimation'
+import PasswordAnimation from '../components/PasswordAnimation'
 
 export default function Generator() {
   const [generatedPassword, setGeneratedPassword] = useState('')
