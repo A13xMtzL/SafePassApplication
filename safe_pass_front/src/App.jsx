@@ -2,8 +2,8 @@
 
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
-import BackgroundCircles from './componets/BackgroundCircles'
-import NavBar from './componets/NavBar'
+import BackgroundCircles from './components/BackgroundCircles'
+import NavBar from './components/NavBar'
 import CheckLeaked from './pages/CheckLeaked'
 import Generator from './pages/Generator'
 import Home from './pages/Home'
