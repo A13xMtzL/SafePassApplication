@@ -77,5 +77,7 @@
     "Secure-connections-always-description": "Usa conexiones seguras (HTTPS) al cambiar o ingresar contraseñas. Evita redes públicas no seguras.",
     "Awareness-and-training": "Conciencia y Formación",
     "Awareness-and-training-description": "Educa a los usuarios sobre la importancia de las contraseñas seguras. Mantente informado sobre las amenazas.",
+    "Monitor-your-accounts": "Monitoreo de Actividad",
+    "Monitor-your-accounts-description": "Revisa regularmente la actividad de tu cuenta. ¡Detecta y actúa contra actividades sospechosas!"
   }
 }

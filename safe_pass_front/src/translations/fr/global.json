@@ -61,5 +61,24 @@
     "message": "Votre message",
     "messagePlaceholder": "Écrivez votre message ici...",
     "send": "Envoyer un message"
+  },
+  "guide": {
+    "Strong-passwords": "Mots de passe forts",
+    "Strong-passwords-description": "Combinez majuscules, minuscules, chiffres et caractères spéciaux pour les rendre incassables.",
+    "Diversify-your-passwords": "Diversifiez vos mots de passe",
+    "Diversify-your-passwords-description": "'utilisez pas le même mot de passe partout. Un gestionnaire de mots de passe est votre allié.",
+    "Make-them-long-and-powerful": "Rendez-les longs et puissants",
+    "Make-them-long-and-powerful-description": "Optez pour des mots de passe d'au moins 16 caractères. La longueur ajoute de la force.",
+    "Update-constantly": "Mise à jour constante",
+    "Update-constantly-description": "Changez vos mots de passe régulièrement, au moins tous les 3-6 mois. Gardez-les frais !",
+    "Two-factor-authentication": "Authentification à deux facteurs",
+    "Two-factor-authentication-description": "Activez l'authentification à deux facteurs chaque fois que possible. Double sécurité !",
+    "Secure-connections-always": "Connexions sécurisées toujours",
+    "Secure-connections-always-description": "Utilisez des connexions sécurisées (HTTPS) lors du changement ou de l'entrée de mots de passe. Évitez les réseaux publics non sécurisés.",
+    "Awareness-and-training": "Sensibilisation et formation",
+    "Awareness-and-training-description": "Éduquez les utilisateurs sur l'importance des mots de passe sécurisés. Restez informé des menaces.",
+    "Monitor-your-accounts": "Monitoreo de Actividad",
+    "Monitor-your-accounts-description": "Revue régulière de l'activité de votre compte. Détectez et agissez contre les activités suspectes !"
   }
+  
 }

@@ -61,5 +61,23 @@
     "message": "Your message",
     "messagePlaceholder": "Enter your message here...",
     "send": "Send message"
+  },
+  "guide": {
+    "Strong-passwords": "Strong Passwords",
+    "Strong-passwords-description": "Combine uppercase, lowercase, numbers, and special characters to make them unbreakable.",
+    "Diversify-your-passwords": "Diversify Your Passwords",
+    "Diversify-your-passwords-description": "Do not use the same password everywhere. A password manager is your ally.",
+    "Make-them-long-and-powerful": "Make them Long and Powerful",
+    "Make-them-long-and-powerful-description": "Opt for passwords of at least 16 characters. Length adds strength.",
+    "Update-constantly": "Update Constantly",
+    "Update-constantly-description": "Change your passwords regularly, at least every 3-6 months. Keep them fresh!",
+    "Two-factor-authentication": "Two-Factor Authentication",
+    "Two-factor-authentication-description": "Enable two-factor authentication whenever possible. Double security!",
+    "Secure-connections-always": "Secure Connections Always",
+    "Secure-connections-always-description": "Use secure connections (HTTPS) when changing or entering passwords. Avoid unsafe public networks.",
+    "Awareness-and-training": "Awareness and Training",
+    "Awareness-and-training-description": "Educate users about the importance of secure passwords. Stay informed about threats.",
+    "Monitor-your-accounts": "Activity Monitoring",
+    "Monitor-your-accounts-description": "Regularly review your account activity. Detect and act against suspicious activities!"
   }
 }
