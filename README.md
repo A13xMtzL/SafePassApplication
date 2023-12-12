@@ -45,7 +45,8 @@ Para comenzar con SafePass, siga estos pasos
 2. Inicie el servidor de backend usando `python app.py`
 (Notese que es necesario tener instalado python 3 o superior)
 
-**Alternativamente, puedes ejecutar el proyecto usando el archivo `start.bat`:**
+>[!TIP]
+> **Alternativamente, puedes ejecutar el proyecto usando el archivo `start.bat`:**
 
 1. Haga doble clic en el archivo `start.bat` para iniciar el servidor de desarrollo y el backend.
 2. Abra su navegador web y navegue hasta `http://localhost:5173`
