@@ -5,6 +5,7 @@ import './App.css'
 import BackgroundCircles from './components/BackgroundCircles'
 import Contact from './components/Contact'
 import Element404 from './components/Element404'
+import FloatingButton from './components/FloatingTip'
 import NavBar from './components/NavBar'
 import CheckLeaked from './pages/CheckLeaked'
 import Generator from './pages/Generator'
@@ -25,9 +26,10 @@ export default function App() {
             <Route path="/generator" element={<Generator />} />
             <Route path="/leaked" element={<CheckLeaked />} />
             <Route path="/guide" element={<PasswordSecurityGuide />} />
-            <Route path="*" element={<Element404 />} /> 
+            <Route path="*" element={<Element404 />} />
           </Routes>
         </div>
+        <FloatingButton />
         <Contact />
       </Router>
     </>
