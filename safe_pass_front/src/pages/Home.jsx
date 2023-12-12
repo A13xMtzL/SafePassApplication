@@ -10,7 +10,7 @@ export default function Home() {
       <div className="mt-4 flex justify-center">
         {/* Primera imagen con texto */}
         <Link to="/generator">
-          <div className="m-4 text-center dark:text-white">
+          <div className="m-4 text-center dark:text-white transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105">
             <img
               src="/PasswordGen.jpeg"
               alt="Generación de contraseña segura"
@@ -21,7 +21,7 @@ export default function Home() {
         </Link>
         {/* Segunda imagen con texto */}
         <Link to="/leaked">
-          <div className="m-4 text-center dark:text-white">
+          <div className="m-4 text-center dark:text-white transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105">
             <img
               src="/PwnedCheck.jpeg"
               alt="Comprobación de contraseñas"
@@ -32,7 +32,7 @@ export default function Home() {
         </Link>
         {/* Tercera imagen con texto */}
         <Link to="/validator">
-          <div className="m-4 text-center dark:text-white">
+          <div className="m-4 text-center dark:text-white transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105">
             <img
               src="/PasswordVal.jpeg"
               alt="Validación de contraseñas"
