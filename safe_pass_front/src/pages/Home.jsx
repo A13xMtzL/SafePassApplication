@@ -10,7 +10,7 @@ export default function Home() {
       <div className="mt-4 flex justify-center">
         {/* Primera imagen con texto */}
         <Link to="/generator">
-          <div className="mx-3 rounded-lg bg-[#cde0e8] dark:bg-teal-800 pb-7 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105">
+          <div className="mx-3 rounded-lg bg-[#cde0e8] pb-7 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-teal-800">
             <div className="m-4 text-center dark:text-white">
               <img
                 src="/PasswordGen.jpeg"
@@ -23,7 +23,7 @@ export default function Home() {
         </Link>
         {/* Segunda imagen con texto */}
         <Link to="/leaked">
-          <div className="mx-3 rounded-lg bg-[#cde0e8] dark:bg-teal-800 pb-1 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105">
+          <div className="mx-3 rounded-lg bg-[#cde0e8] pb-1 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-teal-800">
             <div className="m-4 text-center dark:text-white">
               <img
                 src="/PwnedCheck.jpeg"
@@ -36,7 +36,7 @@ export default function Home() {
         </Link>
         {/* Tercera imagen con texto */}
         <Link to="/validator">
-          <div className="mx-3 rounded-lg bg-[#cde0e8] dark:bg-teal-800 pb-1 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105">
+          <div className="mx-3 rounded-lg bg-[#cde0e8] pb-1 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-teal-800">
             <div className="m-4 text-center dark:text-white">
               <img
                 src="/PasswordVal.jpeg"

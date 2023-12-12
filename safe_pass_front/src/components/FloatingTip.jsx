@@ -12,7 +12,7 @@ export default function FloatingButton() {
 
   return (
     <button
-      className="fixed top-20 right-8 transform rounded-full bg-blue-500 p-4 text-white shadow-lg transition-transform hover:scale-110 hover:bg-blue-600 focus:outline-none"
+      className="fixed right-8 top-20 transform rounded-full bg-blue-500 p-4 text-white shadow-lg transition-transform hover:scale-110 hover:bg-blue-600 focus:outline-none"
       onClick={handleClick}
       alt="Tips for secure passwords"
       title="Tips for secure passwords"
