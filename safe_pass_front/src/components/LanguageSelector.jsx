@@ -5,21 +5,36 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TbWorld } from 'react-icons/tb'
 
+const languages = ['es', 'en', 'fr']
+
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
-  const [t, i18n] = useTranslation('global')
+  const { t } = useTranslation('global')
 
   const changeLanguage = (language) => {
     i18next.changeLanguage(language)
     localStorage.setItem('i18nextLng', language)
   }
 
+  const LanguageButton = ({ language, languageName }) => (
+    <button
+      className="block px-4 py-2 text-sm text-gray-900"
+      tabIndex={-1}
+      onClick={() => {
+        changeLanguage(language)
+        setIsOpen(false)
+      }}
+    >
+      {t(`navbar.${languageName}`)}
+    </button>
+  )
+
   return (
     <div className="relative inline-block text-left">
       <div className="ml-1">
         <button
           type="button"
-          className="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-gray-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 dark:bg-white dark:text-gray-900"
+          className="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-gray-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors duration-500 ease-in-out hover:scale-x-105 hover:bg-gray-800 dark:bg-white dark:text-gray-900"
           id="menu-button"
           aria-expanded={isOpen}
           aria-haspopup="true"
@@ -53,40 +68,9 @@ export default function LanguageSelector() {
           tabIndex={-1}
         >
           <div className="py-1">
-            {/* Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" */}
-            <button
-              className="block px-4 py-2 text-sm text-gray-900"
-              tabIndex={-1}
-              id="menu-item-0"
-              onClick={() => {
-                changeLanguage('es')
-                setIsOpen(false)
-              }}
-            >
-              {t('navbar.spanish')}
-            </button>
-            <button
-              className="block px-4 py-2 text-sm text-gray-900"
-              tabIndex={-1}
-              id="menu-item-1"
-              onClick={() => {
-                changeLanguage('en')
-                setIsOpen(false)
-              }}
-            >
-              {t('navbar.english')}
-            </button>
-            <button
-              className="block px-4 py-2 text-sm text-gray-900"
-              tabIndex={-1}
-              id="menu-item-2"
-              onClick={() => {
-                changeLanguage('fr')
-                setIsOpen(false)
-              }}
-            >
-              {t('navbar.french')}
-            </button>
+            <LanguageButton language="es" languageName="spanish" />
+            <LanguageButton language="en" languageName="english" />
+            <LanguageButton language="fr" languageName="french" />
           </div>
         </div>
       )}

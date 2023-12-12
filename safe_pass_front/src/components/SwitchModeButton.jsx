@@ -3,15 +3,21 @@
 import { useCallback, useEffect, useState } from 'react'
 
 export default function SwitchModeButton() {
-  const [darkMode, setDarkMode] = useState(false) // state variable to track current mode
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode') // get saved mode from localStorage
+    return savedMode === 'true' // convert string to boolean
+  })
 
   const toggleDarkMode = useCallback(() => {
-    setDarkMode((prevMode) => !prevMode) // function to toggle mode
+    setDarkMode((prevMode) => {
+      localStorage.setItem('darkMode', String(!prevMode)) // save mode to localStorage
+      return !prevMode
+    })
   }, [])
 
   useEffect(() => {
     const body = document.querySelector('body')
-    body.classList.toggle('dark', darkMode) // add 'dark' class to body element based on mode
+    body.classList.toggle('dark', darkMode)
   }, [darkMode])
 
   return (
