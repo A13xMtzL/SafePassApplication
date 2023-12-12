@@ -3,6 +3,7 @@
 import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import BackgroundCircles from './components/BackgroundCircles'
+import Contact from './components/Contact'
 import NavBar from './components/NavBar'
 import CheckLeaked from './pages/CheckLeaked'
 import Generator from './pages/Generator'
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/leaked" element={<CheckLeaked />} />
           </Routes>
         </div>
+        <Contact />
       </Router>
     </>
   )

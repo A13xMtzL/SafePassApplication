@@ -16,7 +16,7 @@
     "title2": "mot de passe",
     "placeholder": "Entrez votre mot de passe",
     "show": "Afficher le mot de passe",
-    "hide":  "Masquer le mot de passe",
+    "hide": "Masquer le mot de passe",
     "strong": "Fort",
     "medium": "Moyen",
     "weak": "Faible"
@@ -30,7 +30,10 @@
     "symbols": "Symboles",
     "generate": "Générer un mot de passe"
   },
-  "password-animation": { "title": "Votre mot de passe généré est :", "copied": "Copié dans le presse-papiers !" },
+  "password-animation": {
+    "title": "Votre mot de passe généré est :",
+    "copied": "Copié dans le presse-papiers !"
+  },
   "checker-component": {
     "title": "Vérification des mots de passe divulgués",
     "password": "Entrez votre mot de passe :",
@@ -48,5 +51,16 @@
     "english": "Anglais",
     "spanish": "Espagnol",
     "french": "Français"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "email": "Votre email",
+    "mailPlaceholder": "nom@exemple.com",
+    "subject": "Le sujet de votre message",
+    "subjectPlaceholder": "Faites-nous savoir comment nous pouvons vous aider",
+    "message": "Votre message",
+    "messagePlaceholder": "Écrivez votre message ici...",
+    "send": "Envoyer un message"
   }
+
 }
