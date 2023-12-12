@@ -4,10 +4,12 @@ import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import BackgroundCircles from './components/BackgroundCircles'
 import Contact from './components/Contact'
+import Element404 from './components/Element404'
 import NavBar from './components/NavBar'
 import CheckLeaked from './pages/CheckLeaked'
 import Generator from './pages/Generator'
 import Home from './pages/Home'
+import PasswordSecurityGuide from './pages/PasswordSecurityGuide'
 import Validator from './pages/Validator'
 
 export default function App() {
@@ -22,6 +24,8 @@ export default function App() {
             <Route path="/validator" element={<Validator />} />
             <Route path="/generator" element={<Generator />} />
             <Route path="/leaked" element={<CheckLeaked />} />
+            <Route path="/guide" element={<PasswordSecurityGuide />} />
+            <Route path="*" element={<Element404 />} /> 
           </Routes>
         </div>
         <Contact />
