@@ -51,5 +51,15 @@
     "english": "English",
     "spanish": "Spanish",
     "french": "French"
+  },
+  "contact": {
+    "title":"Contact us",
+    "email":"Your email",
+    "mailPlaceholder":"name@example.com",
+    "subject":"Your subject",
+    "subjectPlaceholder":"Let us know how we can help you",
+    "message":"Your message",
+    "messagePlaceholder":"Enter your message here...",
+    "send":"Send message"
   }
 }
