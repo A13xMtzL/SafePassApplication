@@ -53,13 +53,13 @@
     "french": "Francés"
   },
   "contact": {
-    "title":"Contacta con nosotros",
-    "email":"Tu correo electrónico",
-    "mailPlaceholder":"name@example.com",
-    "subject":"El tema de tu mensaje",
-    "subjectPlaceholder":"Haznos saber como podemos ayudarte",
-    "message":"Tu mensaje",
-    "messagePlaceholder":"Escribe tu mensaje acá...",
-    "send":"Mandar mensaje"
+    "title": "Contacta con nosotros",
+    "email": "Tu correo electrónico",
+    "mailPlaceholder": "name@example.com",
+    "subject": "El tema de tu mensaje",
+    "subjectPlaceholder": "Haznos saber como podemos ayudarte",
+    "message": "Tu mensaje",
+    "messagePlaceholder": "Escribe tu mensaje acá...",
+    "send": "Mandar mensaje"
   }
 }

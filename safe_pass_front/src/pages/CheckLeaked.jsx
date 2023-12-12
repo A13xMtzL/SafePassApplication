@@ -74,8 +74,9 @@ export default function CheckLeaked() {
               </button>
               {message && (
                 <div
-                  className={`mt-10 rounded ${isLeaked ? 'bg-red-500' : 'bg-green-700'
-                    } px-4 py-2 font-bold text-white`}
+                  className={`mt-10 rounded ${
+                    isLeaked ? 'bg-red-500' : 'bg-green-700'
+                  } px-4 py-2 font-bold text-white`}
                 >
                   {message}
                 </div>
