@@ -1,5 +1,5 @@
 #root {
-  min-height: 100vh;
+  min-height: 120vh;
   @apply bg-light-mode dark:bg-dark-mode;
   line-height: 1.5;
   font-weight: 400;
@@ -14,11 +14,13 @@
   padding: 2rem;
   text-align: center;
 }
+
 html,
 body {
   /* min-height: 100vh; */
   overflow: auto;
 }
+
 @media (prefers-color-scheme: dark) {
   .css-glow {
     -webkit-box-shadow: 0px 0px 107px 6px rgba(45, 255, 195, 0.032);

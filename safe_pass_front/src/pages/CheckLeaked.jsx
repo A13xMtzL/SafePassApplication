@@ -60,6 +60,7 @@ export default function CheckLeaked() {
                 type="password"
                 value={password}
                 placeholder="Password123"
+                required="true"
                 onChange={handlePasswordChange}
               />
             </div>
@@ -73,9 +74,8 @@ export default function CheckLeaked() {
               </button>
               {message && (
                 <div
-                  className={`mt-10 rounded ${
-                    isLeaked ? 'bg-red-500' : 'bg-green-700'
-                  } px-4 py-2 font-bold text-white`}
+                  className={`mt-10 rounded ${isLeaked ? 'bg-red-500' : 'bg-green-700'
+                    } px-4 py-2 font-bold text-white`}
                 >
                   {message}
                 </div>
