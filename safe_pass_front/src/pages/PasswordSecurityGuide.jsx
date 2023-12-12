@@ -1,6 +1,7 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   BsBook,
   BsCheckAll,
@@ -13,59 +14,52 @@ import {
 } from 'react-icons/bs'
 
 export default function PasswordSecurityGuide() {
+  const { t } = useTranslation('global')
   const tips = [
     {
       icon: <BsShieldLock size={40} className="text-blue-500" />,
-      title: 'Contraseñas Fuertes',
-      content:
-        'Combina mayúsculas, minúsculas, números y caracteres especiales para hacerlas inquebrantables.',
+      title: t('guide.Strong-passwords'),
+      content: t('guide.Strong-passwords-description'),
     },
     {
       icon: <BsShieldShaded size={40} className="text-green-500" />,
-      title: 'Diversifica tus Contraseñas',
-      content:
-        'No uses la misma contraseña en todas partes. Un administrador de contraseñas es tu aliado.',
+      title: t('guide.Diversify-your-passwords'),
+      content: t('guide.Diversify-your-passwords-description'),
     },
     {
       icon: <BsKey size={40} className="text-yellow-500" />,
-      title: 'Hazlas Largas y Poderosas',
-      content:
-        'Opta por contraseñas de al menos 16 caracteres. La longitud añade fuerza.',
+      title: t('guide.Make-them-long-and-powerful'),
+      content: t('guide.Make-them-long-and-powerful-description'),
     },
     {
       icon: <BsClock size={40} className="text-purple-500" />,
-      title: 'Actualízate Constantemente',
-      content:
-        'Cambia tus contraseñas regularmente, al menos cada 3-6 meses. ¡Mantén la frescura!',
+      title: t('guide.Update-constantly'),
+      content: t('guide.Update-constantly-description'),
     },
     {
       icon: <BsCheckAll size={40} className="text-red-500" />,
-      title: 'Verificación en Dos Pasos',
-      content:
-        'Activa la verificación en dos pasos siempre que sea posible. ¡Doble seguridad!',
+      title: t('guide.Two-factor-authentication'),
+      content: t('guide.Two-factor-authentication-description'),
     },
     {
       icon: <BsWifi size={40} className="text-indigo-500" />,
-      title: 'Conexiones Seguras Siempre',
-      content:
-        'Usa conexiones seguras (HTTPS) al cambiar o ingresar contraseñas. Evita redes públicas no seguras.',
+      title: t('guide.Secure-connections-always'),
+      content: t('guide.Secure-connections-always-description'),
     },
     {
       icon: <BsBook size={40} className="text-pink-500" />,
-      title: 'Conciencia y Formación',
-      content:
-        'Educa a los usuarios sobre la importancia de las contraseñas seguras. Mantente informado sobre las amenazas.',
+      title: t('guide.Awareness-and-training'),
+      content: t('guide.Awareness-and-training-description'),
     },
     {
       icon: <BsEye size={40} className="text-orange-500" />,
-      title: 'Monitoreo de Actividad',
-      content:
-        'Revisa regularmente la actividad de tu cuenta. ¡Detecta y actúa contra actividades sospechosas!',
+      title: t('guide.Monitor-your-accounts'),
+      content: t('guide.Monitor-your-accounts-description'),
     },
   ]
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 overflow-auto h-screen md:h-auto">
+    <div className="grid h-screen grid-cols-1 gap-6 overflow-auto md:h-auto md:grid-cols-2 lg:grid-cols-3">
       {tips.map((tip, index) => (
         <div
           key={index}
