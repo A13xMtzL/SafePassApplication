@@ -61,5 +61,21 @@
     "message": "Tu mensaje",
     "messagePlaceholder": "Escribe tu mensaje acá...",
     "send": "Mandar mensaje"
+  },
+  "guide": {
+    "Strong-passwords": "Contraseñas Fuertes",
+    "Strong-passwords-description": "Combina mayúsculas, minúsculas, números y caracteres especiales para hacerlas inquebrantables.",
+    "Diversify-your-passwords": "Diversifica tus Contraseñas",
+    "Diversify-your-passwords-description": "No uses la misma contraseña en todas partes. Un administrador de contraseñas es tu aliado.",
+    "Make-them-long-and-powerful": "Hazlas Largas y Poderosas",
+    "Make-them-long-and-powerful-description": "Opta por contraseñas de al menos 16 caracteres. La longitud añade fuerza.",
+    "Update-constantly": "Actualízate Constantemente",
+    "Update-constantly-description": "Cambia tus contraseñas regularmente, al menos cada 3-6 meses. ¡Mantén la frescura!",
+    "Two-factor-authentication": "Verificación en Dos Pasos",
+    "Two-factor-authentication-description": "Activa la verificación en dos pasos siempre que sea posible. ¡Doble seguridad!",
+    "Secure-connections-always": "Conexiones Seguras Siempre",
+    "Secure-connections-always-description": "Usa conexiones seguras (HTTPS) al cambiar o ingresar contraseñas. Evita redes públicas no seguras.",
+    "Awareness-and-training": "Conciencia y Formación",
+    "Awareness-and-training-description": "Educa a los usuarios sobre la importancia de las contraseñas seguras. Mantente informado sobre las amenazas.",
   }
 }
