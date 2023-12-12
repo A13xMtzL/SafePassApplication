@@ -10,35 +10,41 @@ export default function Home() {
       <div className="mt-4 flex justify-center">
         {/* Primera imagen con texto */}
         <Link to="/generator">
-          <div className="m-4 text-center dark:text-white">
-            <img
-              src="/PasswordGen.jpeg"
-              alt="Generación de contraseña segura"
-              className=" max-w-full"
-            />
-            <p>{t('home-images.generator')}</p>
+          <div className="mx-3 rounded-lg bg-[#cde0e8] pb-7 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-teal-800">
+            <div className="m-4 text-center dark:text-white">
+              <img
+                src="/PasswordGen.jpeg"
+                alt="Generación de contraseña segura"
+                className=" max-w-full"
+              />
+              <p className="text-lg ">{t('home-images.generator')}</p>
+            </div>
           </div>
         </Link>
         {/* Segunda imagen con texto */}
         <Link to="/leaked">
-          <div className="m-4 text-center dark:text-white">
-            <img
-              src="/PwnedCheck.jpeg"
-              alt="Comprobación de contraseñas"
-              className="max-w-full"
-            />
-            <p>{t('home-images.checker')}</p>
+          <div className="mx-3 rounded-lg bg-[#cde0e8] pb-1 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-teal-800">
+            <div className="m-4 text-center dark:text-white">
+              <img
+                src="/PwnedCheck.jpeg"
+                alt="Comprobación de contraseñas"
+                className="max-w-full"
+              />
+              <p className="text-lg ">{t('home-images.checker')}</p>
+            </div>
           </div>
         </Link>
         {/* Tercera imagen con texto */}
         <Link to="/validator">
-          <div className="m-4 text-center dark:text-white">
-            <img
-              src="/PasswordVal.jpeg"
-              alt="Validación de contraseñas"
-              className="max-w-full"
-            />
-            <p>{t('home-images.validator')}</p>
+          <div className="mx-3 rounded-lg bg-[#cde0e8] pb-1 pt-1 shadow-md transition-transform duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-teal-800">
+            <div className="m-4 text-center dark:text-white">
+              <img
+                src="/PasswordVal.jpeg"
+                alt="Validación de contraseñas"
+                className="max-w-full"
+              />
+              <p className="text-lg ">{t('home-images.validator')}</p>
+            </div>
           </div>
         </Link>
       </div>

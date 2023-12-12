@@ -17,9 +17,9 @@ export default function BackgroundCircles(props) {
       }}
       className="pointer-events-none absolute left-0 top-0 z-0 flex h-full w-full items-center justify-center"
     >
-      <div className="absolute mt-52 h-[300px] w-[300px] rounded-full border border-light-mode dark:border-dark-mode" />
-      <div className="absolute mt-52 h-[500px] w-[500px] rounded-full border border-light-mode dark:border-dark-mode" />
-      <div className="absolute mt-52 h-[750px] w-[750px] animate-pulse rounded-full border border-[#c63a74] opacity-20 dark:border-[#66d89f97]" />{' '}
+      <div className="absolute mt-52 h-[300px] w-[300px]  animate-pulse rounded-full border  border-light-mode dark:border-dark-mode" />
+      <div className="absolute mt-52 h-[500px] w-[500px]  animate-spin rounded-full border  border-light-mode dark:border-dark-mode" />
+      <div className="absolute mt-52 h-[750px] w-[750px]  animate-pulse rounded-full border border-[#c63a74]  opacity-20 dark:border-[#66d89f97]" />{' '}
       <div />
     </motion.div>
   )
