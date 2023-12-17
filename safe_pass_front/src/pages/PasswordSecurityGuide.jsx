@@ -59,19 +59,21 @@ export default function PasswordSecurityGuide() {
   ]
 
   return (
-    <div className="grid h-screen grid-cols-1 gap-6 overflow-auto md:h-auto md:grid-cols-2 lg:grid-cols-3">
-      {tips.map((tip, index) => (
-        <div
-          key={index}
-          className="flex transform flex-col rounded-lg bg-white p-6 shadow-md transition-transform duration-300 hover:rotate-1 hover:shadow-lg"
-        >
-          <div className="mb-4 flex items-center justify-center">
-            {tip.icon}
+    <div>
+      <div className="grid h-screen grid-cols-1 gap-6 overflow-auto md:mb-14 md:h-auto md:grid-cols-2 lg:grid-cols-3">
+        {tips.map((tip, index) => (
+          <div
+            key={index}
+            className="flex transform flex-col rounded-lg bg-white p-6 shadow-md transition-transform duration-300 hover:rotate-1 hover:shadow-lg"
+          >
+            <div className="mb-4 flex items-center justify-center">
+              {tip.icon}
+            </div>
+            <h2 className="mb-2 text-lg font-semibold">{tip.title}</h2>
+            <p className="text-gray-700">{tip.content}</p>
           </div>
-          <h2 className="mb-2 text-lg font-semibold">{tip.title}</h2>
-          <p className="text-gray-700">{tip.content}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }

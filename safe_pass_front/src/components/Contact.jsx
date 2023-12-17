@@ -1,9 +1,18 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export default function Contact() {
   const { t } = useTranslation('global')
+  const [Email, setEmail] = useState('delta.software@gmail.com')
+  const [Subject, setSubject] = useState('')
+  const [Message, setMessage] = useState('')
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    window.open(`mailto:${Email}?subject=${Subject}&body=${Message}`)
+  }
 
   return (
     <section className="bg-slate-200 dark:bg-gray-900">
@@ -11,20 +20,21 @@ export default function Contact() {
         <h2 className="mb-4 text-center text-3xl font-extrabold tracking-tight text-gray-700 dark:text-white">
           {t('contact.title')}
         </h2>
-        <form action="#" className="space-y-8">
+        <form action="#" className="space-y-8" onSubmit={handleFormSubmit}>
           <div>
             <label
               htmlFor="email"
               className="mb-2 block text-left text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              {t('contact.email')}
-            </label>
+            ></label>
             <input
               type="email"
               id="email"
               className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               placeholder={t('contact.mailPlaceholder')}
+              onChange={(e) => setEmail(e.target.value)}
+              value={Email}
               required
+              readOnly
             />
           </div>
           <div>
@@ -39,6 +49,7 @@ export default function Contact() {
               id="subject"
               className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               placeholder={t('contact.subjectPlaceholder')}
+              onChange={(e) => setSubject(e.target.value)}
               required
             />
           </div>
@@ -54,7 +65,7 @@ export default function Contact() {
               rows={2}
               className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               placeholder={t('contact.messagePlaceholder')}
-              defaultValue={''}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
