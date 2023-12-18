@@ -60,7 +60,7 @@ export default function PasswordSecurityGuide() {
 
   return (
     <div>
-      <div className="grid h-screen grid-cols-1 gap-6 overflow-auto md:mb-14 md:h-auto md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid h-screen mt-7 grid-cols-1 gap-6 overflow-auto md:mb-14 md:h-auto md:grid-cols-2 lg:grid-cols-3">
         {tips.map((tip, index) => (
           <div
             key={index}
