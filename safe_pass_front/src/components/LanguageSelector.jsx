@@ -4,33 +4,21 @@ import i18next from 'i18next'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TbWorld } from 'react-icons/tb'
-
-const languages = ['es', 'en', 'fr']
+import LanguageButton from './LanguageButton'
 
 export default function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
   const { t } = useTranslation('global')
+  const [activeLanguage, setActiveLanguage] = useState('es' || i18next.language)
 
   const changeLanguage = (language) => {
     i18next.changeLanguage(language)
     localStorage.setItem('i18nextLng', language)
+    setActiveLanguage(language)
   }
 
-  const LanguageButton = ({ language, languageName }) => (
-    <button
-      className="block px-4 py-2 text-sm text-gray-900"
-      tabIndex={-1}
-      onClick={() => {
-        changeLanguage(language)
-        setIsOpen(false)
-      }}
-    >
-      {t(`navbar.${languageName}`)}
-    </button>
-  )
-
   return (
-    <div className="relative inline-block text-left">
+    <section className="relative inline-block text-left">
       <div className="ml-1">
         <button
           type="button"
@@ -38,7 +26,10 @@ export default function LanguageSelector() {
           id="menu-button"
           aria-expanded={isOpen}
           aria-haspopup="true"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            setActiveLanguage(i18next.language)
+            setIsOpen(!isOpen)
+          }}
         >
           {t('navbar.language')}
           <TbWorld
@@ -61,19 +52,40 @@ export default function LanguageSelector() {
       </div>
 
       {isOpen && (
-        <div
-          className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        <section
+          className="absolute right-0 z-10 mt-2 w-36 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
           tabIndex={-1}
         >
-          <div className="py-1">
-            <LanguageButton language="es" languageName="spanish" />
-            <LanguageButton language="en" languageName="english" />
-            <LanguageButton language="fr" languageName="french" />
+          <div className="">
+            <LanguageButton
+              language="es"
+              languageName="spanish"
+              languageCountry="ES"
+              activeLanguage={activeLanguage}
+              changeLanguage={changeLanguage}
+              setIsOpen={setIsOpen}
+            />
+            <LanguageButton
+              language="en"
+              languageName="english"
+              languageCountry="US"
+              activeLanguage={activeLanguage}
+              changeLanguage={changeLanguage}
+              setIsOpen={setIsOpen}
+            />
+            <LanguageButton
+              language="fr"
+              languageName="french"
+              languageCountry="FR"
+              activeLanguage={activeLanguage}
+              changeLanguage={changeLanguage}
+              setIsOpen={setIsOpen}
+            />
           </div>
-        </div>
+        </section>
       )}
-    </div>
+    </section>
   )
 }
