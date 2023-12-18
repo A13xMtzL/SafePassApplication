@@ -76,10 +76,16 @@ export default function Home() {
       </h1>
       <div className="max-w-20rem z-10 overflow-hidden rounded-md bg-[#48474d]  shadow-md dark:bg-sky-950">
         <div className="px-4 py-2 ">
-          <h4 className="text-lgfont-bold mb-2 text-slate-200">
-            {t('home.title')}
-          </h4>
-          <p className="text-slate-200">{t('home.description')}</p>
+          <div className="px-4 py-2">
+            <h4 className="mb-2 text-xl font-bold text-slate-200">
+              {t('home.title')}
+            </h4>
+          </div>
+          <div className="px-4 py-2">
+            <p className="text-center text-lg text-slate-100">
+              {t('home.description')}
+            </p>
+          </div>
         </div>
       </div>
       <motion.div
