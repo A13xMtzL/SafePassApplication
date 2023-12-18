@@ -1,6 +1,6 @@
 // (c) URJC - Safe Pass 2023, rights reserved.
 
-import i18next from 'i18next'
+import i18next, { changeLanguage } from 'i18next'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TbWorld } from 'react-icons/tb'
@@ -11,8 +11,8 @@ export default function LanguageSelector() {
   const { t } = useTranslation('global')
   const [activeLanguage, setActiveLanguage] = useState('es' || i18next.language)
 
-  const changeLanguage = (language) => {
-    i18next.changeLanguage(language)
+  const _changeLanguage = (language) => {
+    changeLanguage(language)
     localStorage.setItem('i18nextLng', language)
     setActiveLanguage(language)
   }
@@ -64,7 +64,7 @@ export default function LanguageSelector() {
               languageName="spanish"
               languageCountry="ES"
               activeLanguage={activeLanguage}
-              changeLanguage={changeLanguage}
+              changeLanguage={_changeLanguage}
               setIsOpen={setIsOpen}
             />
             <LanguageButton
@@ -72,7 +72,7 @@ export default function LanguageSelector() {
               languageName="english"
               languageCountry="US"
               activeLanguage={activeLanguage}
-              changeLanguage={changeLanguage}
+              changeLanguage={_changeLanguage}
               setIsOpen={setIsOpen}
             />
             <LanguageButton
@@ -80,7 +80,7 @@ export default function LanguageSelector() {
               languageName="french"
               languageCountry="FR"
               activeLanguage={activeLanguage}
-              changeLanguage={changeLanguage}
+              changeLanguage={_changeLanguage}
               setIsOpen={setIsOpen}
             />
           </div>
