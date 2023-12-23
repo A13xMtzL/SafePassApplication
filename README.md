@@ -3,7 +3,7 @@
 
 # SafePass
 SafePass te permite realizar multiples acciones para mejorar tu seguridad digital como generar contraseñas aleatorias, comprobar la seguridad de tus contraseñas y comprobar si han sido filtradas.
-![Alt text](imgs/Captura.png)
+![Alt text](imgs/Version1.0.png)
 
 # Tabla de Contenidos
 - [SafePass](#safepass)
@@ -67,7 +67,7 @@ Para comenzar con SafePass, siga estos pasos
 # Instrucciones para importar la extensión en el navegador
 ## Vista Previa de extensión
 <!-- ![image](https://github.com/A13xMtzL/SafePassApplication/assets/99751453/3d01e2fc-b877-4af2-bb70-d260af3a517a) -->
-![image](imgs/Captura_Extension.png)
+![image](imgs/Extension.png)
 
 
 
